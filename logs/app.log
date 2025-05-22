@@ -1,0 +1,112 @@
+{"code":8704,"info":"Represents an error message from the server","level":"error","message":"Error initializing keyspace: Keyspace 'distributed_storage' does not exist","name":"ResponseError","stack":"ResponseError: Keyspace 'distributed_storage' does not exist\n    at FrameReader.readError (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\readers.js:389:17)\n    at Parser.parseBody (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\streams.js:209:66)\n    at Parser._transform (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\streams.js:152:10)\n    at Transform._write (node:internal/streams/transform:171:8)\n    at writeOrBuffer (node:internal/streams/writable:572:12)\n    at _write (node:internal/streams/writable:501:10)\n    at Writable.write (node:internal/streams/writable:510:10)\n    at Protocol.ondata (node:internal/streams/readable:1009:22)\n    at Protocol.emit (node:events:518:28)\n    at addChunk (node:internal/streams/readable:561:12)","timestamp":"2025-05-22T10:14:23.634Z"}
+{"level":"info","message":"Keyspace initialized successfully","timestamp":"2025-05-22T11:27:49.690Z"}
+{"level":"info","message":"Tables initialized successfully","timestamp":"2025-05-22T11:27:49.695Z"}
+{"level":"info","message":"Database initialized successfully","timestamp":"2025-05-22T11:27:49.695Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-05-22T11:27:49.698Z"}
+{"level":"info","message":"Starting stress test...","timestamp":"2025-05-22T11:36:40.138Z"}
+{"level":"info","message":"Progress: 10/1000 requests completed","timestamp":"2025-05-22T11:36:40.194Z"}
+{"level":"info","message":"Progress: 20/1000 requests completed","timestamp":"2025-05-22T11:36:40.208Z"}
+{"level":"info","message":"Progress: 30/1000 requests completed","timestamp":"2025-05-22T11:36:40.225Z"}
+{"level":"info","message":"Progress: 40/1000 requests completed","timestamp":"2025-05-22T11:36:40.239Z"}
+{"level":"info","message":"Progress: 50/1000 requests completed","timestamp":"2025-05-22T11:36:40.254Z"}
+{"level":"info","message":"Progress: 60/1000 requests completed","timestamp":"2025-05-22T11:36:40.270Z"}
+{"level":"info","message":"Progress: 70/1000 requests completed","timestamp":"2025-05-22T11:36:40.288Z"}
+{"level":"info","message":"Progress: 80/1000 requests completed","timestamp":"2025-05-22T11:36:40.304Z"}
+{"level":"info","message":"Progress: 90/1000 requests completed","timestamp":"2025-05-22T11:36:40.320Z"}
+{"level":"info","message":"Progress: 100/1000 requests completed","timestamp":"2025-05-22T11:36:40.336Z"}
+{"level":"info","message":"Progress: 110/1000 requests completed","timestamp":"2025-05-22T11:36:40.352Z"}
+{"level":"info","message":"Progress: 120/1000 requests completed","timestamp":"2025-05-22T11:36:40.366Z"}
+{"level":"info","message":"Progress: 130/1000 requests completed","timestamp":"2025-05-22T11:36:40.384Z"}
+{"level":"info","message":"Progress: 140/1000 requests completed","timestamp":"2025-05-22T11:36:40.403Z"}
+{"level":"info","message":"Progress: 150/1000 requests completed","timestamp":"2025-05-22T11:36:40.421Z"}
+{"level":"info","message":"Progress: 160/1000 requests completed","timestamp":"2025-05-22T11:36:40.441Z"}
+{"level":"info","message":"Progress: 170/1000 requests completed","timestamp":"2025-05-22T11:36:40.460Z"}
+{"level":"info","message":"Progress: 180/1000 requests completed","timestamp":"2025-05-22T11:36:40.478Z"}
+{"level":"info","message":"Progress: 190/1000 requests completed","timestamp":"2025-05-22T11:36:40.496Z"}
+{"level":"info","message":"Progress: 200/1000 requests completed","timestamp":"2025-05-22T11:36:40.514Z"}
+{"level":"info","message":"Progress: 210/1000 requests completed","timestamp":"2025-05-22T11:36:40.535Z"}
+{"level":"info","message":"Progress: 220/1000 requests completed","timestamp":"2025-05-22T11:36:40.555Z"}
+{"level":"info","message":"Progress: 230/1000 requests completed","timestamp":"2025-05-22T11:36:40.574Z"}
+{"level":"info","message":"Progress: 240/1000 requests completed","timestamp":"2025-05-22T11:36:40.590Z"}
+{"level":"info","message":"Progress: 250/1000 requests completed","timestamp":"2025-05-22T11:36:40.605Z"}
+{"level":"info","message":"Progress: 260/1000 requests completed","timestamp":"2025-05-22T11:36:40.622Z"}
+{"level":"info","message":"Progress: 270/1000 requests completed","timestamp":"2025-05-22T11:36:40.634Z"}
+{"level":"info","message":"Progress: 280/1000 requests completed","timestamp":"2025-05-22T11:36:40.645Z"}
+{"level":"info","message":"Progress: 290/1000 requests completed","timestamp":"2025-05-22T11:36:40.655Z"}
+{"level":"info","message":"Progress: 300/1000 requests completed","timestamp":"2025-05-22T11:36:40.666Z"}
+{"level":"info","message":"Progress: 310/1000 requests completed","timestamp":"2025-05-22T11:36:40.678Z"}
+{"level":"info","message":"Progress: 320/1000 requests completed","timestamp":"2025-05-22T11:36:40.689Z"}
+{"level":"info","message":"Progress: 330/1000 requests completed","timestamp":"2025-05-22T11:36:40.700Z"}
+{"level":"info","message":"Progress: 340/1000 requests completed","timestamp":"2025-05-22T11:36:40.712Z"}
+{"level":"info","message":"Progress: 350/1000 requests completed","timestamp":"2025-05-22T11:36:40.724Z"}
+{"level":"info","message":"Progress: 360/1000 requests completed","timestamp":"2025-05-22T11:36:40.735Z"}
+{"level":"info","message":"Progress: 370/1000 requests completed","timestamp":"2025-05-22T11:36:40.748Z"}
+{"level":"info","message":"Progress: 380/1000 requests completed","timestamp":"2025-05-22T11:36:40.761Z"}
+{"level":"info","message":"Progress: 390/1000 requests completed","timestamp":"2025-05-22T11:36:40.778Z"}
+{"level":"info","message":"Progress: 400/1000 requests completed","timestamp":"2025-05-22T11:36:40.791Z"}
+{"level":"info","message":"Progress: 410/1000 requests completed","timestamp":"2025-05-22T11:36:40.804Z"}
+{"level":"info","message":"Progress: 420/1000 requests completed","timestamp":"2025-05-22T11:36:40.813Z"}
+{"level":"info","message":"Progress: 430/1000 requests completed","timestamp":"2025-05-22T11:36:40.826Z"}
+{"level":"info","message":"Progress: 440/1000 requests completed","timestamp":"2025-05-22T11:36:40.838Z"}
+{"level":"info","message":"Progress: 450/1000 requests completed","timestamp":"2025-05-22T11:36:40.848Z"}
+{"level":"info","message":"Progress: 460/1000 requests completed","timestamp":"2025-05-22T11:36:40.859Z"}
+{"level":"info","message":"Progress: 470/1000 requests completed","timestamp":"2025-05-22T11:36:40.870Z"}
+{"level":"info","message":"Progress: 480/1000 requests completed","timestamp":"2025-05-22T11:36:40.882Z"}
+{"level":"info","message":"Progress: 490/1000 requests completed","timestamp":"2025-05-22T11:36:40.893Z"}
+{"level":"info","message":"Progress: 500/1000 requests completed","timestamp":"2025-05-22T11:36:40.905Z"}
+{"level":"info","message":"Progress: 510/1000 requests completed","timestamp":"2025-05-22T11:36:40.918Z"}
+{"level":"info","message":"Progress: 520/1000 requests completed","timestamp":"2025-05-22T11:36:40.930Z"}
+{"level":"info","message":"Progress: 530/1000 requests completed","timestamp":"2025-05-22T11:36:40.940Z"}
+{"level":"info","message":"Progress: 540/1000 requests completed","timestamp":"2025-05-22T11:36:40.951Z"}
+{"level":"info","message":"Progress: 550/1000 requests completed","timestamp":"2025-05-22T11:36:40.962Z"}
+{"level":"info","message":"Progress: 560/1000 requests completed","timestamp":"2025-05-22T11:36:40.972Z"}
+{"level":"info","message":"Progress: 570/1000 requests completed","timestamp":"2025-05-22T11:36:40.983Z"}
+{"level":"info","message":"Progress: 580/1000 requests completed","timestamp":"2025-05-22T11:36:40.994Z"}
+{"level":"info","message":"Progress: 590/1000 requests completed","timestamp":"2025-05-22T11:36:41.004Z"}
+{"level":"info","message":"Progress: 600/1000 requests completed","timestamp":"2025-05-22T11:36:41.016Z"}
+{"level":"info","message":"Progress: 610/1000 requests completed","timestamp":"2025-05-22T11:36:41.027Z"}
+{"level":"info","message":"Progress: 620/1000 requests completed","timestamp":"2025-05-22T11:36:41.038Z"}
+{"level":"info","message":"Progress: 630/1000 requests completed","timestamp":"2025-05-22T11:36:41.046Z"}
+{"level":"info","message":"Progress: 640/1000 requests completed","timestamp":"2025-05-22T11:36:41.055Z"}
+{"level":"info","message":"Progress: 650/1000 requests completed","timestamp":"2025-05-22T11:36:41.066Z"}
+{"level":"info","message":"Progress: 660/1000 requests completed","timestamp":"2025-05-22T11:36:41.076Z"}
+{"level":"info","message":"Progress: 670/1000 requests completed","timestamp":"2025-05-22T11:36:41.089Z"}
+{"level":"info","message":"Progress: 680/1000 requests completed","timestamp":"2025-05-22T11:36:41.100Z"}
+{"level":"info","message":"Progress: 690/1000 requests completed","timestamp":"2025-05-22T11:36:41.110Z"}
+{"level":"info","message":"Progress: 700/1000 requests completed","timestamp":"2025-05-22T11:36:41.121Z"}
+{"level":"info","message":"Progress: 710/1000 requests completed","timestamp":"2025-05-22T11:36:41.134Z"}
+{"level":"info","message":"Progress: 720/1000 requests completed","timestamp":"2025-05-22T11:36:41.145Z"}
+{"level":"info","message":"Progress: 730/1000 requests completed","timestamp":"2025-05-22T11:36:41.156Z"}
+{"level":"info","message":"Progress: 740/1000 requests completed","timestamp":"2025-05-22T11:36:41.183Z"}
+{"level":"info","message":"Progress: 750/1000 requests completed","timestamp":"2025-05-22T11:36:41.196Z"}
+{"level":"info","message":"Progress: 760/1000 requests completed","timestamp":"2025-05-22T11:36:41.211Z"}
+{"level":"info","message":"Progress: 770/1000 requests completed","timestamp":"2025-05-22T11:36:41.223Z"}
+{"level":"info","message":"Progress: 780/1000 requests completed","timestamp":"2025-05-22T11:36:41.233Z"}
+{"level":"info","message":"Progress: 790/1000 requests completed","timestamp":"2025-05-22T11:36:41.244Z"}
+{"level":"info","message":"Progress: 800/1000 requests completed","timestamp":"2025-05-22T11:36:41.253Z"}
+{"level":"info","message":"Progress: 810/1000 requests completed","timestamp":"2025-05-22T11:36:41.263Z"}
+{"level":"info","message":"Progress: 820/1000 requests completed","timestamp":"2025-05-22T11:36:41.273Z"}
+{"level":"info","message":"Progress: 830/1000 requests completed","timestamp":"2025-05-22T11:36:41.283Z"}
+{"level":"info","message":"Progress: 840/1000 requests completed","timestamp":"2025-05-22T11:36:41.294Z"}
+{"level":"info","message":"Progress: 850/1000 requests completed","timestamp":"2025-05-22T11:36:41.309Z"}
+{"level":"info","message":"Progress: 860/1000 requests completed","timestamp":"2025-05-22T11:36:41.320Z"}
+{"level":"info","message":"Progress: 870/1000 requests completed","timestamp":"2025-05-22T11:36:41.330Z"}
+{"level":"info","message":"Progress: 880/1000 requests completed","timestamp":"2025-05-22T11:36:41.339Z"}
+{"level":"info","message":"Progress: 890/1000 requests completed","timestamp":"2025-05-22T11:36:41.349Z"}
+{"level":"info","message":"Progress: 900/1000 requests completed","timestamp":"2025-05-22T11:36:41.359Z"}
+{"level":"info","message":"Progress: 910/1000 requests completed","timestamp":"2025-05-22T11:36:41.368Z"}
+{"level":"info","message":"Progress: 920/1000 requests completed","timestamp":"2025-05-22T11:36:41.378Z"}
+{"level":"info","message":"Progress: 930/1000 requests completed","timestamp":"2025-05-22T11:36:41.387Z"}
+{"level":"info","message":"Progress: 940/1000 requests completed","timestamp":"2025-05-22T11:36:41.397Z"}
+{"level":"info","message":"Progress: 950/1000 requests completed","timestamp":"2025-05-22T11:36:41.406Z"}
+{"level":"info","message":"Progress: 960/1000 requests completed","timestamp":"2025-05-22T11:36:41.416Z"}
+{"level":"info","message":"Progress: 970/1000 requests completed","timestamp":"2025-05-22T11:36:41.429Z"}
+{"level":"info","message":"Progress: 980/1000 requests completed","timestamp":"2025-05-22T11:36:41.440Z"}
+{"level":"info","message":"Progress: 990/1000 requests completed","timestamp":"2025-05-22T11:36:41.450Z"}
+{"level":"info","message":"Progress: 1000/1000 requests completed","timestamp":"2025-05-22T11:36:41.463Z"}
+{"level":"info","message":"Stress test completed:","timestamp":"2025-05-22T11:36:41.463Z"}
+{"level":"info","message":"Total requests: 1000","timestamp":"2025-05-22T11:36:41.464Z"}
+{"level":"info","message":"Successful requests: 1000","timestamp":"2025-05-22T11:36:41.464Z"}
+{"level":"info","message":"Failed requests: 0","timestamp":"2025-05-22T11:36:41.464Z"}
+{"level":"info","message":"Duration: 1.322 seconds","timestamp":"2025-05-22T11:36:41.464Z"}
+{"level":"info","message":"Requests per second: 756.42965204236","timestamp":"2025-05-22T11:36:41.464Z"}

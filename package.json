@@ -1,0 +1,26 @@
+{
+  "name": "distributed-data-storage",
+  "version": "1.0.0",
+  "description": "Distributed Data Storage & Processing System using Apache Cassandra",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "stress-test": "node tests/stress-test.js"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cassandra-driver": "^4.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  }
+}
