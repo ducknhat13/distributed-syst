@@ -86,7 +86,13 @@ app.use(express.json());
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-    res.status(200).json({ status: 'ok' });
+    res.status(200).json({ 
+        status: 'ok',
+        service: 'user-service',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        database: 'cassandra-connected'
+    });
 });
 
 // Tạo user mới
@@ -108,8 +114,11 @@ app.post('/users', async (req, res) => {
 // Lấy danh sách users
 app.get('/users', async (req, res) => {
     try {
+        console.log('Getting all users...');
         const query = 'SELECT * FROM users';
+        console.log('Executing query:', query);
         const result = await client.execute(query);
+        console.log('Query result:', result.rows);
         res.json(result.rows);
     } catch (error) {
         console.error('Error getting users:', error);

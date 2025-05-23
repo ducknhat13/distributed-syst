@@ -63,9 +63,8 @@ async function initDatabase() {
                 CREATE TABLE IF NOT EXISTS orders (
                     id text PRIMARY KEY,
                     user_id text,
-                    product text,
-                    quantity int,
-                    total_price decimal
+                    items text,
+                    total_amount decimal
                 )
             `);
             
@@ -88,19 +87,25 @@ app.use(express.json());
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-    res.status(200).json({ status: 'ok' });
+    res.status(200).json({ 
+        status: 'ok',
+        service: 'order-service',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        database: 'cassandra-connected'
+    });
 });
 
 // Tạo order mới
 app.post('/orders', async (req, res) => {
     try {
-        const { user_id, product, quantity, total_price } = req.body;
+        const { userId, items, totalAmount } = req.body;
         const id = Date.now().toString();
         
-        const query = 'INSERT INTO orders (id, user_id, product, quantity, total_price) VALUES (?, ?, ?, ?, ?)';
-        await client.execute(query, [id, user_id, product, quantity, total_price], { prepare: true });
+        const query = 'INSERT INTO orders (id, user_id, items, total_amount) VALUES (?, ?, ?, ?)';
+        await client.execute(query, [id, userId, JSON.stringify(items), totalAmount], { prepare: true });
         
-        res.status(201).json({ id, user_id, product, quantity, total_price });
+        res.status(201).json({ id });
     } catch (error) {
         console.error('Error creating order:', error);
         res.status(500).json({ error: 'Internal server error' });
@@ -110,11 +115,43 @@ app.post('/orders', async (req, res) => {
 // Lấy danh sách orders
 app.get('/orders', async (req, res) => {
     try {
+        console.log('Received GET request for /orders');
         const query = 'SELECT * FROM orders';
         const result = await client.execute(query);
-        res.json(result.rows);
+        console.log('Query result:', result.rows);
+        const orders = result.rows.map(row => ({
+            id: row.id,
+            userId: row.user_id,
+            items: JSON.parse(row.items),
+            totalAmount: row.total_amount
+        }));
+        console.log('Sending response:', orders);
+        res.json(orders);
     } catch (error) {
         console.error('Error getting orders:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Lấy chi tiết order
+app.get('/orders/:id', async (req, res) => {
+    try {
+        const query = 'SELECT * FROM orders WHERE id = ?';
+        const result = await client.execute(query, [req.params.id], { prepare: true });
+        
+        if (result.rows.length === 0) {
+            return res.status(404).json({ error: 'Order not found' });
+        }
+        
+        const order = result.rows[0];
+        res.json({
+            id: order.id,
+            userId: order.user_id,
+            items: JSON.parse(order.items),
+            totalAmount: order.total_amount
+        });
+    } catch (error) {
+        console.error('Error getting order:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 });

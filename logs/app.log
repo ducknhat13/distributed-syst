@@ -112,3 +112,712 @@
 {"level":"info","message":"Requests per second: 756.42965204236","timestamp":"2025-05-22T11:36:41.464Z"}
 {"info":"Represents an error when a query cannot be performed because no host is available or could be reached by the driver.","innerErrors":{"127.0.0.1:9042":{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-4078,"port":9042,"syscall":"connect"},"::1:9042":{"address":"::1","code":"ECONNREFUSED","errno":-4078,"port":9042,"syscall":"connect"}},"level":"error","message":"Error initializing keyspace: All host(s) tried for query failed. First host tried, ::1:9042: Error: connect ECONNREFUSED ::1:9042\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1634:16) {\n  errno: -4078,\n  code: 'ECONNREFUSED',\n  syscall: 'connect',\n  address: '::1',\n  port: 9042\n}. See innerErrors.","name":"NoHostAvailableError","stack":"NoHostAvailableError: All host(s) tried for query failed. First host tried, ::1:9042: Error: connect ECONNREFUSED ::1:9042\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1634:16) {\n  errno: -4078,\n  code: 'ECONNREFUSED',\n  syscall: 'connect',\n  address: '::1',\n  port: 9042\n}. See innerErrors.\n    at ControlConnection._borrowFirstConnection (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\control-connection.js:307:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async ControlConnection._initializeConnection (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\control-connection.js:526:7)\n    at async ControlConnection.init (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\control-connection.js:212:5)\n    at async Client._connect (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\client.js:513:5)\n    at async Client._execute (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\client.js:1000:5)\n    at async initializeKeyspace (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\src\\config\\cassandra.js:21:9)\n    at async initialize (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\src\\config\\cassandra.js:54:9)\n    at async startServer (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\src\\index.js:29:9)","timestamp":"2025-05-23T01:27:29.066Z"}
 {"info":"Represents an error when a query cannot be performed because no host is available or could be reached by the driver.","innerErrors":{"127.0.0.1:9042":{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-4078,"port":9042,"syscall":"connect"},"::1:9042":{"address":"::1","code":"ECONNREFUSED","errno":-4078,"port":9042,"syscall":"connect"}},"level":"error","message":"Error initializing keyspace: All host(s) tried for query failed. First host tried, ::1:9042: Error: connect ECONNREFUSED ::1:9042\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1634:16) {\n  errno: -4078,\n  code: 'ECONNREFUSED',\n  syscall: 'connect',\n  address: '::1',\n  port: 9042\n}. See innerErrors.","name":"NoHostAvailableError","stack":"NoHostAvailableError: All host(s) tried for query failed. First host tried, ::1:9042: Error: connect ECONNREFUSED ::1:9042\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1634:16) {\n  errno: -4078,\n  code: 'ECONNREFUSED',\n  syscall: 'connect',\n  address: '::1',\n  port: 9042\n}. See innerErrors.\n    at ControlConnection._borrowFirstConnection (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\control-connection.js:307:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async ControlConnection._initializeConnection (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\control-connection.js:526:7)\n    at async ControlConnection.init (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\control-connection.js:212:5)\n    at async Client._connect (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\client.js:513:5)\n    at async Client._execute (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\node_modules\\cassandra-driver\\lib\\client.js:1000:5)\n    at async initializeKeyspace (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\src\\config\\cassandra.js:21:9)\n    at async initialize (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\src\\config\\cassandra.js:54:9)\n    at async startServer (C:\\Users\\ROG\\OneDrive\\Máy tính\\apache-cassandra\\src\\index.js:29:9)","timestamp":"2025-05-23T01:37:18.755Z"}
+{"level":"info","message":"Starting distributed system tests...","timestamp":"2025-05-23T17:19:14.683Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:19:14.685Z"}
+{"level":"info","message":"Starting distributed communication tests...","timestamp":"2025-05-23T17:19:44.690Z"}
+{"level":"info","message":"Testing service communication...","timestamp":"2025-05-23T17:19:44.691Z"}
+{"email":"test@example.com","id":"1748020784934","level":"info","message":"User Service Response:","name":"Test User","timestamp":"2025-05-23T17:19:45.316Z"}
+{"level":"error","message":"Service Communication Test Failed:","timestamp":"2025-05-23T17:19:45.476Z"}
+{"level":"info","message":"Testing Cassandra failover...","timestamp":"2025-05-23T17:19:45.477Z"}
+{"level":"error","message":"Cassandra Failover Test Failed:","timestamp":"2025-05-23T17:19:50.685Z"}
+{"level":"info","message":"Testing load balancing...","timestamp":"2025-05-23T17:19:50.686Z"}
+{"level":"info","message":"Load Distribution:","node1":0,"node2":0,"node3":0,"nodeundefined":null,"timestamp":"2025-05-23T17:19:50.840Z"}
+{"level":"info","message":"Testing network latency...","timestamp":"2025-05-23T17:19:50.841Z"}
+{"level":"info","message":"Average Latency:","timestamp":"2025-05-23T17:19:50.854Z"}
+{"level":"info","message":"Starting distributed system tests...","timestamp":"2025-05-23T17:25:12.349Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:25:12.351Z"}
+{"level":"info","message":"Starting distributed communication tests...","timestamp":"2025-05-23T17:25:42.367Z"}
+{"level":"info","message":"Testing service communication...","timestamp":"2025-05-23T17:25:42.367Z"}
+{"email":"test@example.com","id":"1748021142607","level":"info","message":"User Service Response:","name":"Test User","timestamp":"2025-05-23T17:25:42.949Z"}
+{"id":"1748021143306","level":"info","message":"Order Service Response:","timestamp":"2025-05-23T17:25:43.439Z"}
+{"level":"info","message":"Testing Cassandra failover...","timestamp":"2025-05-23T17:25:43.440Z"}
+{"level":"error","message":"Cassandra Failover Test Failed:","timestamp":"2025-05-23T17:25:49.156Z"}
+{"level":"info","message":"Testing load balancing...","timestamp":"2025-05-23T17:25:49.157Z"}
+{"level":"info","message":"Load Distribution:","node1":0,"node2":0,"node3":0,"nodeundefined":null,"timestamp":"2025-05-23T17:25:49.302Z"}
+{"level":"info","message":"Testing network latency...","timestamp":"2025-05-23T17:25:49.303Z"}
+{"level":"info","message":"Average Latency:","timestamp":"2025-05-23T17:25:49.316Z"}
+{"level":"info","message":"Starting distributed system tests...","timestamp":"2025-05-23T17:26:30.549Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:26:30.551Z"}
+{"level":"info","message":"Starting distributed communication tests...","timestamp":"2025-05-23T17:27:00.554Z"}
+{"level":"info","message":"Testing service communication...","timestamp":"2025-05-23T17:27:00.554Z"}
+{"email":"test@example.com","id":"1748021220613","level":"info","message":"User Service Response:","name":"Test User","timestamp":"2025-05-23T17:27:00.940Z"}
+{"id":"1748021221072","level":"info","message":"Order Service Response:","timestamp":"2025-05-23T17:27:01.119Z"}
+{"level":"info","message":"Testing Cassandra failover...","timestamp":"2025-05-23T17:27:01.119Z"}
+{"level":"info","message":"Successfully read users from Cassandra via User Service","timestamp":"2025-05-23T17:27:01.466Z"}
+{"level":"info","message":"Successfully read orders from Cassandra via Order Service","timestamp":"2025-05-23T17:27:01.618Z"}
+{"level":"info","message":"Testing load balancing...","timestamp":"2025-05-23T17:27:01.619Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.623Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.626Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.628Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.630Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.633Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.636Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.638Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.640Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.642Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.644Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.646Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.648Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.663Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.665Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.667Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.668Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.670Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.672Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.673Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.675Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.676Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.678Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.680Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.681Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.683Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.684Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.686Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.688Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.689Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.692Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.694Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.695Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.697Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.698Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.700Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.702Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.704Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.706Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.708Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.709Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.711Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.712Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.714Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.716Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.717Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.719Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.721Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.722Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.723Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.725Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.727Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.728Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.730Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.732Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.733Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.735Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.743Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.745Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.746Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.753Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.755Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.757Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.758Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.760Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.762Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.764Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.766Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.768Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.770Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.773Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.775Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.777Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.779Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.781Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.783Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.785Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.787Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.789Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.791Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.793Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.794Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.796Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.799Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.801Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.805Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.808Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.811Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.813Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.815Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.817Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.819Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.821Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.823Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.825Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.827Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.829Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.831Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.833Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.834Z"}
+{"level":"info","message":"Health response:","status":"ok","timestamp":"2025-05-23T17:27:01.836Z"}
+{"level":"info","message":"Load Distribution:","node1":0,"node2":0,"node3":0,"nodeUndefined":100,"timestamp":"2025-05-23T17:27:01.836Z"}
+{"level":"info","message":"Testing network latency...","timestamp":"2025-05-23T17:27:01.837Z"}
+{"level":"info","message":"Average Latency:","timestamp":"2025-05-23T17:27:01.854Z"}
+{"level":"info","message":"Starting distributed system tests...","timestamp":"2025-05-23T17:29:55.312Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:29:55.314Z"}
+{"level":"info","message":"Starting distributed communication tests...","timestamp":"2025-05-23T17:30:25.319Z"}
+{"level":"info","message":"Testing service communication...","timestamp":"2025-05-23T17:30:25.320Z"}
+{"email":"test@example.com","id":"1748021425440","level":"info","message":"User Service Response:","name":"Test User","timestamp":"2025-05-23T17:30:25.623Z"}
+{"id":"1748021425793","level":"info","message":"Order Service Response:","timestamp":"2025-05-23T17:30:25.909Z"}
+{"level":"info","message":"Testing Cassandra failover...","timestamp":"2025-05-23T17:30:25.910Z"}
+{"level":"info","message":"Successfully read users from Cassandra via User Service","timestamp":"2025-05-23T17:30:25.949Z"}
+{"level":"info","message":"Successfully read orders from Cassandra via Order Service","timestamp":"2025-05-23T17:30:25.978Z"}
+{"level":"info","message":"Testing load balancing...","timestamp":"2025-05-23T17:30:25.978Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:25.983Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:25.985Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:25.989Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:25.993Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:25.997Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.002Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.004Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.007Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.010Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.012Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.014Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.016Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.018Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.019Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.021Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.023Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.025Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.026Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.028Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.030Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.032Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.033Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.035Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.038Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.039Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.041Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.043Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.045Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.047Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.048Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.050Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.052Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.054Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.055Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.057Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.059Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.060Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.062Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.064Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.066Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.068Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.069Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.071Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.073Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.075Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.077Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.079Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.080Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.082Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.083Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.085Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.087Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.089Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.090Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.092Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.093Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.095Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.096Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.098Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.100Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.101Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.103Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.104Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.106Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.107Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.109Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.110Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.112Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.114Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.115Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.117Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.118Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.120Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.122Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.123Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.125Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.126Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.128Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.129Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.131Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.133Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.134Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.136Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.137Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.138Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.140Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.142Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.143Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.145Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.147Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.149Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.151Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.153Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.155Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.156Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.158Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.159Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.161Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.163Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:30:26.165Z"}
+{"level":"info","message":"Load Distribution:","node1":100,"node2":0,"node3":0,"nodeUndefined":0,"timestamp":"2025-05-23T17:30:26.165Z"}
+{"level":"info","message":"Testing network latency...","timestamp":"2025-05-23T17:30:26.165Z"}
+{"level":"info","message":"Average Latency:","timestamp":"2025-05-23T17:30:26.179Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:32:49.191Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:32:49.194Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:33:19.199Z"}
+{"level":"info","message":"Testing data replication across Cassandra nodes...","timestamp":"2025-05-23T17:33:19.200Z"}
+{"level":"info","message":"Writing test data to first node: replication_test_1748021599203","timestamp":"2025-05-23T17:33:19.203Z"}
+{"level":"error","message":"Replication test failed:","timestamp":"2025-05-23T17:33:22.879Z"}
+{"level":"info","message":"Testing data sharding across Cassandra nodes...","timestamp":"2025-05-23T17:33:22.880Z"}
+{"level":"info","message":"Writing 20 test records for sharding test...","timestamp":"2025-05-23T17:33:22.881Z"}
+{"level":"error","message":"Sharding test failed:","timestamp":"2025-05-23T17:33:27.946Z"}
+{"level":"info","message":"Testing different consistency levels...","timestamp":"2025-05-23T17:33:27.946Z"}
+{"level":"error","message":"Consistency levels test failed:","timestamp":"2025-05-23T17:33:32.520Z"}
+{"level":"info","message":"Testing cross-datacenter replication simulation...","timestamp":"2025-05-23T17:33:32.520Z"}
+{"email":"crossdc@test.com","id":"1748021612586","level":"info","message":"Created user via API:","name":"Cross DC Test 1748021612520","timestamp":"2025-05-23T17:33:32.724Z"}
+{"level":"info","message":"Cross-datacenter replication test: PASS","timestamp":"2025-05-23T17:33:34.832Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:34:24.170Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:34:24.172Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:34:54.187Z"}
+{"level":"info","message":"Testing data replication across Cassandra nodes...","timestamp":"2025-05-23T17:34:54.188Z"}
+{"level":"info","message":"Writing test data to first node: replication_test_1748021694190","timestamp":"2025-05-23T17:34:54.191Z"}
+{"level":"info","message":"Data found on node 1: localhost:9042","timestamp":"2025-05-23T17:35:02.519Z"}
+{"level":"info","message":"Data found on node 2: localhost:9043","timestamp":"2025-05-23T17:35:07.683Z"}
+{"level":"info","message":"Data found on node 3: localhost:9044","timestamp":"2025-05-23T17:35:12.815Z"}
+{"level":"info","message":"Replication test result: 3/3 nodes have the data","timestamp":"2025-05-23T17:35:12.815Z"}
+{"level":"info","message":"Testing data sharding across Cassandra nodes...","timestamp":"2025-05-23T17:35:12.819Z"}
+{"level":"info","message":"Writing 10 test records for sharding test...","timestamp":"2025-05-23T17:35:12.820Z"}
+{"level":"info","message":"Successfully read 10/10 test records","timestamp":"2025-05-23T17:35:20.032Z"}
+{"level":"info","message":"Sharding test result: PASS","timestamp":"2025-05-23T17:35:20.033Z"}
+{"level":"info","message":"Testing different consistency levels...","timestamp":"2025-05-23T17:35:20.034Z"}
+{"level":"error","message":"Consistency levels test failed:","timestamp":"2025-05-23T17:35:27.130Z"}
+{"level":"info","message":"Testing cross-datacenter replication simulation...","timestamp":"2025-05-23T17:35:27.131Z"}
+{"email":"crossdc@test.com","id":"1748021727181","level":"info","message":"Created user via API:","name":"Cross DC Test 1748021727131","timestamp":"2025-05-23T17:35:27.271Z"}
+{"level":"info","message":"Cross-datacenter replication test: PASS","timestamp":"2025-05-23T17:35:29.383Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:36:15.699Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:36:15.701Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:36:45.702Z"}
+{"level":"info","message":"Testing data replication across Cassandra nodes...","timestamp":"2025-05-23T17:36:45.703Z"}
+{"level":"info","message":"Writing test data to first node: replication_test_1748021805705","timestamp":"2025-05-23T17:36:45.705Z"}
+{"level":"info","message":"Data found on node 1: localhost:9042","timestamp":"2025-05-23T17:36:54.715Z"}
+{"level":"info","message":"Data found on node 2: localhost:9043","timestamp":"2025-05-23T17:36:59.857Z"}
+{"level":"info","message":"Data found on node 3: localhost:9044","timestamp":"2025-05-23T17:37:04.987Z"}
+{"level":"info","message":"Replication test result: 3/3 nodes have the data","timestamp":"2025-05-23T17:37:04.988Z"}
+{"level":"info","message":"Testing data sharding across Cassandra nodes...","timestamp":"2025-05-23T17:37:05.018Z"}
+{"level":"info","message":"Writing 10 test records for sharding test...","timestamp":"2025-05-23T17:37:05.019Z"}
+{"level":"info","message":"Successfully read 10/10 test records","timestamp":"2025-05-23T17:37:12.518Z"}
+{"level":"info","message":"Sharding test result: PASS","timestamp":"2025-05-23T17:37:12.518Z"}
+{"level":"info","message":"Testing different consistency levels...","timestamp":"2025-05-23T17:37:12.519Z"}
+{"level":"error","message":"Consistency levels test failed:","timestamp":"2025-05-23T17:37:20.742Z"}
+{"level":"info","message":"Testing cross-datacenter replication simulation...","timestamp":"2025-05-23T17:37:20.742Z"}
+{"email":"crossdc@test.com","id":"1748021840781","level":"info","message":"Created user via API:","name":"Cross DC Test 1748021840742","timestamp":"2025-05-23T17:37:20.829Z"}
+{"level":"info","message":"Cross-datacenter replication test: PASS","timestamp":"2025-05-23T17:37:22.944Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:37:57.629Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:37:57.631Z"}
+{"level":"info","message":"Starting Sharding and Replication tests...","timestamp":"2025-05-23T17:38:27.647Z"}
+{"level":"info","message":"Testing data replication across Cassandra nodes...","timestamp":"2025-05-23T17:38:27.648Z"}
+{"level":"info","message":"Writing test data to first node: replication_test_1748021907651","timestamp":"2025-05-23T17:38:27.651Z"}
+{"level":"info","message":"Data found on node 1: localhost:9042","timestamp":"2025-05-23T17:38:35.961Z"}
+{"level":"info","message":"Data found on node 2: localhost:9043","timestamp":"2025-05-23T17:38:41.025Z"}
+{"level":"info","message":"Data found on node 3: localhost:9044","timestamp":"2025-05-23T17:38:46.080Z"}
+{"level":"info","message":"Replication test result: 3/3 nodes have the data","timestamp":"2025-05-23T17:38:46.081Z"}
+{"level":"info","message":"Testing data sharding across Cassandra nodes...","timestamp":"2025-05-23T17:38:46.083Z"}
+{"level":"info","message":"Writing 10 test records for sharding test...","timestamp":"2025-05-23T17:38:46.084Z"}
+{"level":"info","message":"Successfully read 10/10 test records","timestamp":"2025-05-23T17:38:53.211Z"}
+{"level":"info","message":"Sharding test result: PASS","timestamp":"2025-05-23T17:38:53.211Z"}
+{"level":"info","message":"Testing consistency through API...","timestamp":"2025-05-23T17:38:53.212Z"}
+{"email":"consistency@test.com","id":"1748021933245","level":"info","message":"Created user via API:","name":"Consistency Test 1748021933212","timestamp":"2025-05-23T17:38:53.324Z"}
+{"level":"info","message":"Consistency levels test: PASS","timestamp":"2025-05-23T17:38:55.409Z"}
+{"level":"info","message":"Testing cross-datacenter replication simulation...","timestamp":"2025-05-23T17:38:55.409Z"}
+{"email":"crossdc@test.com","id":"1748021935412","level":"info","message":"Created user via API:","name":"Cross DC Test 1748021935409","timestamp":"2025-05-23T17:38:55.452Z"}
+{"level":"info","message":"Cross-datacenter replication test: PASS","timestamp":"2025-05-23T17:38:57.480Z"}
+{"level":"info","message":"Starting Replication tests...","timestamp":"2025-05-23T17:41:54.855Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:41:54.857Z"}
+{"level":"info","message":"Starting Replication tests...","timestamp":"2025-05-23T17:42:24.861Z"}
+{"level":"info","message":"Testing data replication across Cassandra nodes...","timestamp":"2025-05-23T17:42:24.862Z"}
+{"level":"info","message":"Writing test data to first node: replication_test_1748022144864","timestamp":"2025-05-23T17:42:24.864Z"}
+{"level":"info","message":"Data found on node 1: localhost:9042","timestamp":"2025-05-23T17:42:33.233Z"}
+{"level":"info","message":"Data found on node 2: localhost:9043","timestamp":"2025-05-23T17:42:38.351Z"}
+{"level":"info","message":"Data found on node 3: localhost:9044","timestamp":"2025-05-23T17:42:43.459Z"}
+{"level":"info","message":"Replication test result: 3/3 nodes have the data","timestamp":"2025-05-23T17:42:43.460Z"}
+{"level":"info","message":"Testing data consistency through API...","timestamp":"2025-05-23T17:42:43.465Z"}
+{"email":"consistency@test.com","id":"1748022163529","level":"info","message":"Created user via API:","name":"Consistency Test 1748022163465","timestamp":"2025-05-23T17:42:43.607Z"}
+{"level":"info","message":"Consistency test: PASS","timestamp":"2025-05-23T17:42:45.695Z"}
+{"level":"info","message":"Testing cross-service replication...","timestamp":"2025-05-23T17:42:45.695Z"}
+{"email":"crossservice@test.com","id":"1748022165702","level":"info","message":"Created user via User Service:","name":"Cross Service Test 1748022165695","timestamp":"2025-05-23T17:42:45.701Z"}
+{"level":"info","message":"Cross-service replication test: PASS","timestamp":"2025-05-23T17:42:47.731Z"}
+{"level":"info","message":"Starting Monitoring and Logging tests...","timestamp":"2025-05-23T17:48:37.113Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:48:37.115Z"}
+{"level":"info","message":"Starting Monitoring and Logging tests...","timestamp":"2025-05-23T17:49:07.130Z"}
+{"level":"info","message":"Testing health check endpoints...","timestamp":"2025-05-23T17:49:07.131Z"}
+{"level":"info","message":"Gateway health check:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T17:49:07.190Z","uptime":38.601202528}
+{"database":"cassandra-connected","level":"info","message":"User Service health check:","service":"user-service","status":"ok","timestamp":"2025-05-23T17:49:07.203Z","uptime":44.703075108}
+{"database":"cassandra-connected","level":"info","message":"Order Service health check:","service":"order-service","status":"ok","timestamp":"2025-05-23T17:49:07.211Z","uptime":44.710158053}
+{"level":"info","message":"Health checks result: PASS","timestamp":"2025-05-23T17:49:07.208Z"}
+{"level":"info","message":"Testing monitoring endpoint...","timestamp":"2025-05-23T17:49:07.208Z"}
+{"gateway":"ok","level":"info","message":"Monitoring data received:","services":["userService","orderService"],"system":"linux","timestamp":"2025-05-23T17:49:07.290Z"}
+{"level":"info","message":"Monitoring endpoint test: PASS","timestamp":"2025-05-23T17:49:07.290Z"}
+{"level":"info","message":"Testing metrics endpoint...","timestamp":"2025-05-23T17:49:07.290Z"}
+{"level":"info","message":"Metrics data received:","requests":143,"services":["userService","orderService","cassandra"],"timestamp":"2025-05-23T17:49:07.297Z","uptime":38.708286608}
+{"level":"info","message":"Metrics endpoint test: PASS","timestamp":"2025-05-23T17:49:07.294Z"}
+{"level":"info","message":"Testing logs endpoint...","timestamp":"2025-05-23T17:49:07.295Z"}
+{"level":"info","message":"Logs data received:","recentLogsCount":50,"timestamp":"2025-05-23T17:49:07.301Z","totalLines":448}
+{"level":"info","message":"Logs endpoint test: PASS","timestamp":"2025-05-23T17:49:07.301Z"}
+{"level":"info","message":"Testing log file creation...","timestamp":"2025-05-23T17:49:07.302Z"}
+{"level":"info","message":"Test log entry for monitoring test","timestamp":"2025-05-23T17:49:07.302Z"}
+{"level":"warn","message":"Test warning log for monitoring test","timestamp":"2025-05-23T17:49:07.302Z"}
+{"level":"error","message":"Test error log for monitoring test","timestamp":"2025-05-23T17:49:07.302Z"}
+{"level":"info","message":"Log file test: PASS","timestamp":"2025-05-23T17:49:08.311Z"}
+{"level":"info","message":"Starting comprehensive stress testing...","timestamp":"2025-05-23T17:51:58.160Z"}
+{"level":"info","message":"This test will simulate high load with concurrent users and multiple requests","timestamp":"2025-05-23T17:51:58.162Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T17:51:58.163Z"}
+{"level":"info","message":"Stress test configuration:","timestamp":"2025-05-23T17:52:28.178Z"}
+{"level":"info","message":"- Concurrent users: 50","timestamp":"2025-05-23T17:52:28.178Z"}
+{"level":"info","message":"- Requests per user: 20","timestamp":"2025-05-23T17:52:28.179Z"}
+{"level":"info","message":"- Total expected requests: ~1000 per test","timestamp":"2025-05-23T17:52:28.179Z"}
+{"level":"info","message":"- Request timeout: 10 seconds","timestamp":"2025-05-23T17:52:28.179Z"}
+{"level":"info","message":"- Ramp up time: 5 seconds","timestamp":"2025-05-23T17:52:28.180Z"}
+{"level":"info","message":"Starting comprehensive stress testing...","timestamp":"2025-05-23T17:52:28.180Z"}
+{"level":"info","message":"Starting stress test for User Service...","timestamp":"2025-05-23T17:52:28.180Z"}
+{"avgResponseTime":7.281,"duration":6143,"errorTypes":[],"failedRequests":0,"level":"info","maxResponseTime":514,"message":"User Service stress test results:","minResponseTime":2,"requestsPerSecond":162.78691193228065,"successRate":1,"successfulRequests":1000,"timestamp":"2025-05-23T17:52:34.324Z","totalRequests":1000}
+{"level":"info","message":"Starting stress test for Order Service...","timestamp":"2025-05-23T17:52:34.325Z"}
+{"avgResponseTime":14.695,"duration":6298,"errorTypes":[],"failedRequests":0,"level":"info","maxResponseTime":543,"message":"Order Service stress test results:","minResponseTime":4,"requestsPerSecond":158.78056525881232,"successRate":1,"successfulRequests":1000,"timestamp":"2025-05-23T17:52:40.623Z","totalRequests":1000}
+{"level":"info","message":"Starting mixed load test...","timestamp":"2025-05-23T17:52:40.624Z"}
+{"avgResponseTime":31.263,"duration":6956,"errorTypes":[],"failedRequests":0,"level":"info","maxResponseTime":447,"message":"Mixed load test results:","minResponseTime":3,"requestsPerSecond":143.7607820586544,"successRate":1,"successfulRequests":1000,"timestamp":"2025-05-23T17:52:47.580Z","totalRequests":1000}
+{"level":"info","message":"Monitoring system performance during load...","timestamp":"2025-05-23T17:52:47.582Z"}
+{"averageUptime":275.12206870700004,"level":"info","memoryUsage":[{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18529120,"rss":39673856},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18576672,"rss":38486016},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18614256,"rss":38486016},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18645792,"rss":38486016},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18714992,"rss":28545024},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18747008,"rss":20574208},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18778616,"rss":21106688},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18810304,"rss":21106688},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18841912,"rss":21106688},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18963424,"rss":21827584},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":18995224,"rss":21213184},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":19026992,"rss":20561920},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":19058896,"rss":20561920},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":19090592,"rss":20561920},{"arrayBuffers":2188184,"external":5072400,"heapTotal":51539968,"heapUsed":19163192,"rss":20447232}],"message":"Performance monitoring results:","timestamp":"2025-05-23T17:53:17.678Z","totalSnapshots":15}
+{"level":"info","message":"Starting System Recovery tests...","timestamp":"2025-05-23T18:02:08.148Z"}
+{"level":"info","message":"This test will verify the system can recover from various failure scenarios","timestamp":"2025-05-23T18:02:08.151Z"}
+{"level":"info","message":"Waiting for services to start...","timestamp":"2025-05-23T18:02:08.151Z"}
+{"level":"info","message":"System Recovery test configuration:","timestamp":"2025-05-23T18:02:38.161Z"}
+{"level":"info","message":"- Container restart testing","timestamp":"2025-05-23T18:02:38.162Z"}
+{"level":"info","message":"- Cassandra node failure and rejoin","timestamp":"2025-05-23T18:02:38.162Z"}
+{"level":"info","message":"- API Gateway recovery","timestamp":"2025-05-23T18:02:38.163Z"}
+{"level":"info","message":"- Complete system recovery","timestamp":"2025-05-23T18:02:38.163Z"}
+{"level":"info","message":"Starting System Recovery tests...","timestamp":"2025-05-23T18:02:38.164Z"}
+{"level":"info","message":"Testing service recovery after container restart...","timestamp":"2025-05-23T18:02:38.164Z"}
+{"level":"info","message":"Step 1: Verifying all services are running...","timestamp":"2025-05-23T18:02:38.164Z"}
+{"level":"info","message":"Step 2: Creating test data...","timestamp":"2025-05-23T18:02:38.282Z"}
+{"level":"info","message":"Created test user:","timestamp":"2025-05-23T18:02:38.454Z"}
+{"level":"info","message":"Step 3: Restarting User Service container...","timestamp":"2025-05-23T18:02:38.455Z"}
+{"level":"info","message":"Step 4: Waiting for User Service to recover...","timestamp":"2025-05-23T18:02:40.804Z"}
+{"level":"info","message":"Step 5: Verifying data persistence after recovery...","timestamp":"2025-05-23T18:02:50.843Z"}
+{"level":"info","message":"Service recovery test: PASS","timestamp":"2025-05-23T18:02:51.646Z"}
+{"level":"info","message":"Testing Cassandra node recovery...","timestamp":"2025-05-23T18:02:51.647Z"}
+{"level":"info","message":"Step 1: Creating test data for Cassandra recovery...","timestamp":"2025-05-23T18:02:51.647Z"}
+{"level":"info","message":"Step 2: Stopping Cassandra node...","timestamp":"2025-05-23T18:02:51.729Z"}
+{"level":"info","message":"Step 3: Verifying system works with 2 Cassandra nodes...","timestamp":"2025-05-23T18:02:58.650Z"}
+{"level":"info","message":"Successfully created user while node is down:","timestamp":"2025-05-23T18:03:03.780Z"}
+{"level":"info","message":"Step 4: Restarting Cassandra node...","timestamp":"2025-05-23T18:03:03.781Z"}
+{"level":"info","message":"Step 5: Waiting for Cassandra node to rejoin cluster...","timestamp":"2025-05-23T18:03:04.265Z"}
+{"level":"info","message":"Step 6: Verifying data consistency after node rejoin...","timestamp":"2025-05-23T18:03:34.267Z"}
+{"level":"info","message":"Cassandra node recovery test: PASS","timestamp":"2025-05-23T18:03:34.605Z"}
+{"level":"info","message":"Testing API Gateway recovery...","timestamp":"2025-05-23T18:03:34.605Z"}
+{"level":"info","message":"Step 1: Verifying API Gateway is working...","timestamp":"2025-05-23T18:03:34.605Z"}
+{"level":"info","message":"Step 2: Stopping API Gateway...","timestamp":"2025-05-23T18:03:34.619Z"}
+{"level":"info","message":"Step 3: Verifying API Gateway is down...","timestamp":"2025-05-23T18:03:36.705Z"}
+{"level":"info","message":"API Gateway is down as expected","timestamp":"2025-05-23T18:03:36.707Z"}
+{"level":"info","message":"Step 4: Starting API Gateway...","timestamp":"2025-05-23T18:03:36.708Z"}
+{"level":"info","message":"Step 5: Waiting for API Gateway recovery...","timestamp":"2025-05-23T18:03:38.461Z"}
+{"level":"info","message":"Waiting for service http://localhost:3003 to be ready... (1/30)","timestamp":"2025-05-23T18:03:38.464Z"}
+{"level":"info","message":"Step 6: Verifying API Gateway functionality after recovery...","timestamp":"2025-05-23T18:03:40.516Z"}
+{"level":"info","message":"API Gateway recovery test: PASS","timestamp":"2025-05-23T18:03:40.519Z"}
+{"level":"info","message":"Testing complete system recovery...","timestamp":"2025-05-23T18:03:40.520Z"}
+{"level":"info","message":"Step 1: Creating test data before system restart...","timestamp":"2025-05-23T18:03:40.520Z"}
+{"level":"info","message":"Step 2: Restarting entire system...","timestamp":"2025-05-23T18:03:40.909Z"}
+{"level":"info","message":"Step 3: Waiting for complete system recovery...","timestamp":"2025-05-23T18:03:52.894Z"}
+{"level":"info","message":"Step 4: Verifying all services after recovery...","timestamp":"2025-05-23T18:04:52.907Z"}
+{"level":"info","message":"Waiting for Gateway service...","timestamp":"2025-05-23T18:04:52.908Z"}
+{"level":"info","message":"Gateway service is ready","timestamp":"2025-05-23T18:04:52.963Z"}
+{"level":"info","message":"Waiting for User service...","timestamp":"2025-05-23T18:04:52.964Z"}
+{"level":"info","message":"User service is ready","timestamp":"2025-05-23T18:04:52.973Z"}
+{"level":"info","message":"Waiting for Order service...","timestamp":"2025-05-23T18:04:52.973Z"}
+{"level":"info","message":"Order service is ready","timestamp":"2025-05-23T18:04:52.981Z"}
+{"level":"info","message":"Step 5: Verifying data persistence after system recovery...","timestamp":"2025-05-23T18:04:52.981Z"}
+{"level":"info","message":"Complete system recovery test: PASS","timestamp":"2025-05-23T18:04:53.710Z"}
+{"level":"info","message":"Starting Deployment Automation tests...","timestamp":"2025-05-23T18:05:05.808Z"}
+{"level":"info","message":"This test will verify automated deployment capabilities","timestamp":"2025-05-23T18:05:05.811Z"}
+{"level":"info","message":"Deployment Automation test configuration:","timestamp":"2025-05-23T18:05:05.811Z"}
+{"level":"info","message":"- Docker Compose automation","timestamp":"2025-05-23T18:05:05.812Z"}
+{"level":"info","message":"- Deployment script automation","timestamp":"2025-05-23T18:05:05.812Z"}
+{"level":"info","message":"- Health check automation","timestamp":"2025-05-23T18:05:05.812Z"}
+{"level":"info","message":"- Scaling automation","timestamp":"2025-05-23T18:05:05.812Z"}
+{"level":"info","message":"Starting Deployment Automation tests...","timestamp":"2025-05-23T18:05:05.812Z"}
+{"level":"info","message":"Testing Docker Compose automation...","timestamp":"2025-05-23T18:05:05.813Z"}
+{"level":"info","message":"Step 1: Verifying Docker Compose file exists...","timestamp":"2025-05-23T18:05:05.813Z"}
+{"level":"info","message":"Step 2: Stopping all services...","timestamp":"2025-05-23T18:05:05.814Z"}
+{"level":"info","message":"Step 3: Starting services with Docker Compose...","timestamp":"2025-05-23T18:05:21.932Z"}
+{"level":"info","message":"Step 4: Waiting for all services to be ready...","timestamp":"2025-05-23T18:05:55.418Z"}
+{"level":"info","message":"Waiting for Gateway service...","timestamp":"2025-05-23T18:06:55.431Z"}
+{"level":"info","message":"Gateway service is ready","timestamp":"2025-05-23T18:06:55.482Z"}
+{"level":"info","message":"Waiting for User service...","timestamp":"2025-05-23T18:06:55.482Z"}
+{"level":"info","message":"User service is ready","timestamp":"2025-05-23T18:06:55.502Z"}
+{"level":"info","message":"Waiting for Order service...","timestamp":"2025-05-23T18:06:55.502Z"}
+{"level":"info","message":"Order service is ready","timestamp":"2025-05-23T18:06:55.564Z"}
+{"level":"info","message":"Step 5: Verifying service functionality...","timestamp":"2025-05-23T18:06:55.564Z"}
+{"level":"info","message":"Docker Compose automation test: PASS","timestamp":"2025-05-23T18:06:55.593Z"}
+{"level":"info","message":"Testing deployment script automation...","timestamp":"2025-05-23T18:06:55.594Z"}
+{"level":"info","message":"Step 1: Creating automated deployment script...","timestamp":"2025-05-23T18:06:55.594Z"}
+{"level":"info","message":"Step 2: Making deployment script executable...","timestamp":"2025-05-23T18:06:55.595Z"}
+{"level":"warn","message":"Could not chmod deployment script (Windows environment)","timestamp":"2025-05-23T18:06:55.622Z"}
+{"level":"info","message":"Step 3: Running automated deployment script...","timestamp":"2025-05-23T18:06:55.623Z"}
+{"level":"info","message":"Executing deployment commands...","timestamp":"2025-05-23T18:06:55.623Z"}
+{"level":"info","message":"Step 4: Verifying automated deployment...","timestamp":"2025-05-23T18:07:45.993Z"}
+{"level":"info","message":"Deployment script automation test: PASS","timestamp":"2025-05-23T18:08:31.425Z"}
+{"level":"info","message":"Testing health check automation...","timestamp":"2025-05-23T18:08:31.425Z"}
+{"level":"info","message":"Step 1: Creating automated health check script...","timestamp":"2025-05-23T18:08:31.426Z"}
+{"level":"info","message":"Step 2: Verifying automated health checks...","timestamp":"2025-05-23T18:08:31.442Z"}
+{"level":"info","message":"Step 3: Testing continuous health monitoring...","timestamp":"2025-05-23T18:08:31.443Z"}
+{"level":"info","message":"Continuous monitoring: 7/7 checks healthy (100.0%)","timestamp":"2025-05-23T18:08:52.582Z"}
+{"level":"info","message":"Waiting for distributed system to start...","timestamp":"2025-05-23T18:09:06.649Z"}
+{"level":"info","message":"================================================================================","timestamp":"2025-05-23T18:09:36.663Z"}
+{"level":"info","message":"Waiting for distributed system to start...","timestamp":"2025-05-23T18:10:37.909Z"}
+{"level":"info","message":"================================================================================","timestamp":"2025-05-23T18:11:07.922Z"}
+{"level":"info","message":"Starting Comprehensive Distributed System Testing","timestamp":"2025-05-23T18:11:07.922Z"}
+{"level":"info","message":"================================================================================","timestamp":"2025-05-23T18:11:07.923Z"}
+{"level":"info","message":"\n🌐 Test 1: Distributed Communication Testing","timestamp":"2025-05-23T18:11:07.923Z"}
+{"level":"info","message":"--------------------------------------------------","timestamp":"2025-05-23T18:11:07.924Z"}
+{"level":"info","message":"Starting distributed communication tests...","timestamp":"2025-05-23T18:11:07.924Z"}
+{"level":"info","message":"Testing service communication...","timestamp":"2025-05-23T18:11:07.924Z"}
+{"email":"test@example.com","id":"1748023868005","level":"info","message":"User Service Response:","name":"Test User","timestamp":"2025-05-23T18:11:08.241Z"}
+{"id":"1748023868690","level":"info","message":"Order Service Response:","timestamp":"2025-05-23T18:11:09.069Z"}
+{"level":"info","message":"Testing Cassandra failover...","timestamp":"2025-05-23T18:11:09.069Z"}
+{"level":"info","message":"Successfully read users from Cassandra via User Service","timestamp":"2025-05-23T18:11:09.795Z"}
+{"level":"info","message":"Successfully read orders from Cassandra via Order Service","timestamp":"2025-05-23T18:11:10.292Z"}
+{"level":"info","message":"Testing load balancing...","timestamp":"2025-05-23T18:11:10.293Z"}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.296Z","uptime":204.062470162}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.299Z","uptime":204.065731687}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.303Z","uptime":204.06912755}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.306Z","uptime":204.072821571}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.310Z","uptime":204.076820652}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.314Z","uptime":204.0802033}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.317Z","uptime":204.083021518}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.319Z","uptime":204.085016639}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.321Z","uptime":204.087615318}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.323Z","uptime":204.089769342}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.325Z","uptime":204.091617874}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.328Z","uptime":204.094260276}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.330Z","uptime":204.09629709}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.332Z","uptime":204.097973401}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.334Z","uptime":204.100171943}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.336Z","uptime":204.102420093}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.338Z","uptime":204.104890628}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.342Z","uptime":204.10809086}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.344Z","uptime":204.110212336}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.348Z","uptime":204.114126859}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.350Z","uptime":204.116127246}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.351Z","uptime":204.11792941}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.353Z","uptime":204.119476875}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.355Z","uptime":204.121770047}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.357Z","uptime":204.123807974}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.359Z","uptime":204.125365343}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.361Z","uptime":204.127129337}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.363Z","uptime":204.129625231}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.365Z","uptime":204.131644481}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.367Z","uptime":204.133261906}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.369Z","uptime":204.135280324}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.371Z","uptime":204.137355353}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.373Z","uptime":204.139189221}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.375Z","uptime":204.141035019}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.377Z","uptime":204.143655687}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.379Z","uptime":204.145814676}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.382Z","uptime":204.14800756}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.384Z","uptime":204.150458685}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.386Z","uptime":204.152108205}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.387Z","uptime":204.153549966}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.389Z","uptime":204.155237219}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.391Z","uptime":204.157969677}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.393Z","uptime":204.15962092}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.395Z","uptime":204.161184456}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.397Z","uptime":204.163372998}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.399Z","uptime":204.165193283}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.400Z","uptime":204.166897388}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.402Z","uptime":204.168526441}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.404Z","uptime":204.170383216}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.406Z","uptime":204.17201669}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.407Z","uptime":204.173602671}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.409Z","uptime":204.175052432}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.411Z","uptime":204.177447869}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.413Z","uptime":204.179161031}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.414Z","uptime":204.180835018}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.416Z","uptime":204.182343285}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.418Z","uptime":204.184277304}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.420Z","uptime":204.186402317}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.422Z","uptime":204.188941583}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.427Z","uptime":204.193182111}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.430Z","uptime":204.196167784}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.433Z","uptime":204.199231537}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.435Z","uptime":204.201553169}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.437Z","uptime":204.203307474}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.439Z","uptime":204.205609719}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.441Z","uptime":204.20736423}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.443Z","uptime":204.208972061}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.445Z","uptime":204.211189676}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.447Z","uptime":204.213264133}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.449Z","uptime":204.215021351}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.450Z","uptime":204.216720353}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.452Z","uptime":204.218590362}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.454Z","uptime":204.220217736}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.456Z","uptime":204.22202173}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.457Z","uptime":204.223630629}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.459Z","uptime":204.225563042}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.461Z","uptime":204.227483991}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.463Z","uptime":204.22929147}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.465Z","uptime":204.231131444}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.467Z","uptime":204.23307279}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.468Z","uptime":204.234782799}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.470Z","uptime":204.236359207}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.471Z","uptime":204.237873529}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.473Z","uptime":204.239706927}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.475Z","uptime":204.241313409}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.476Z","uptime":204.24293537}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.478Z","uptime":204.244475736}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.480Z","uptime":204.246450311}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.482Z","uptime":204.248217331}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.484Z","uptime":204.249994112}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.485Z","uptime":204.251386472}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.487Z","uptime":204.25356938}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.489Z","uptime":204.255512971}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.491Z","uptime":204.257089589}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.492Z","uptime":204.258546939}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.494Z","uptime":204.260377634}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.496Z","uptime":204.262116442}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.497Z","uptime":204.263796617}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.499Z","uptime":204.265225411}
+{"level":"info","message":"Health response:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:10.501Z","uptime":204.267071476}
+{"level":"info","message":"Load Distribution:","node1":100,"node2":0,"node3":0,"nodeUndefined":0,"timestamp":"2025-05-23T18:11:10.500Z"}
+{"level":"info","message":"Testing network latency...","timestamp":"2025-05-23T18:11:10.500Z"}
+{"level":"info","message":"Average Latency:","timestamp":"2025-05-23T18:11:10.515Z"}
+{"cassandraFailover":true,"level":"info","loadBalancing":true,"message":"Test Results:","networkLatency":true,"serviceCommunication":true,"timestamp":"2025-05-23T18:11:10.516Z"}
+{"level":"info","message":"All tests passed:","timestamp":"2025-05-23T18:11:10.516Z"}
+{"level":"info","message":"\n🔄 Test 2: Data Replication Testing","timestamp":"2025-05-23T18:11:10.516Z"}
+{"level":"info","message":"--------------------------------------------------","timestamp":"2025-05-23T18:11:10.516Z"}
+{"level":"info","message":"Starting Replication tests...","timestamp":"2025-05-23T18:11:10.517Z"}
+{"level":"info","message":"Testing data replication across Cassandra nodes...","timestamp":"2025-05-23T18:11:10.517Z"}
+{"level":"info","message":"Writing test data to first node: replication_test_1748023870521","timestamp":"2025-05-23T18:11:10.521Z"}
+{"level":"info","message":"Data found on node 1: localhost:9042","timestamp":"2025-05-23T18:11:19.025Z"}
+{"level":"info","message":"Data found on node 2: localhost:9043","timestamp":"2025-05-23T18:11:24.166Z"}
+{"level":"info","message":"Data found on node 3: localhost:9044","timestamp":"2025-05-23T18:11:29.276Z"}
+{"level":"info","message":"Replication test result: 3/3 nodes have the data","timestamp":"2025-05-23T18:11:29.277Z"}
+{"level":"info","message":"Testing data consistency through API...","timestamp":"2025-05-23T18:11:29.289Z"}
+{"email":"consistency@test.com","id":"1748023889312","level":"info","message":"Created user via API:","name":"Consistency Test 1748023889290","timestamp":"2025-05-23T18:11:29.445Z"}
+{"level":"info","message":"Consistency test: PASS","timestamp":"2025-05-23T18:11:31.584Z"}
+{"level":"info","message":"Testing cross-service replication...","timestamp":"2025-05-23T18:11:31.584Z"}
+{"email":"crossservice@test.com","id":"1748023891585","level":"info","message":"Created user via User Service:","name":"Cross Service Test 1748023891584","timestamp":"2025-05-23T18:11:31.591Z"}
+{"level":"info","message":"Cross-service replication test: PASS","timestamp":"2025-05-23T18:11:33.727Z"}
+{"consistency":true,"crossServiceReplication":true,"level":"info","message":"Replication Test Results:","replication":true,"timestamp":"2025-05-23T18:11:33.727Z"}
+{"level":"info","message":"All replication tests passed:","timestamp":"2025-05-23T18:11:33.727Z"}
+{"level":"info","message":"\n📊 Test 3: Monitoring & Logging Testing","timestamp":"2025-05-23T18:11:33.727Z"}
+{"level":"info","message":"--------------------------------------------------","timestamp":"2025-05-23T18:11:33.727Z"}
+{"level":"info","message":"Starting Monitoring and Logging tests...","timestamp":"2025-05-23T18:11:33.728Z"}
+{"level":"info","message":"Testing health check endpoints...","timestamp":"2025-05-23T18:11:33.728Z"}
+{"level":"info","message":"Gateway health check:","nodeId":1,"service":"api-gateway","status":"ok","timestamp":"2025-05-23T18:11:33.733Z","uptime":227.5117152}
+{"database":"cassandra-connected","level":"info","message":"User Service health check:","service":"user-service","status":"ok","timestamp":"2025-05-23T18:11:33.736Z","uptime":233.732565249}
+{"database":"cassandra-connected","level":"info","message":"Order Service health check:","service":"order-service","status":"ok","timestamp":"2025-05-23T18:11:33.741Z","uptime":233.737973979}
+{"level":"info","message":"Health checks result: PASS","timestamp":"2025-05-23T18:11:33.743Z"}
+{"level":"info","message":"Testing monitoring endpoint...","timestamp":"2025-05-23T18:11:33.743Z"}
+{"gateway":"ok","level":"info","message":"Monitoring data received:","services":["userService","orderService"],"system":"linux","timestamp":"2025-05-23T18:11:33.890Z"}
+{"level":"info","message":"Monitoring endpoint test: PASS","timestamp":"2025-05-23T18:11:33.890Z"}
+{"level":"info","message":"Testing metrics endpoint...","timestamp":"2025-05-23T18:11:33.890Z"}
+{"level":"info","message":"Metrics data received:","requests":991,"services":["userService","orderService","cassandra"],"timestamp":"2025-05-23T18:11:33.894Z","uptime":227.672652262}
+{"level":"info","message":"Metrics endpoint test: PASS","timestamp":"2025-05-23T18:11:33.895Z"}
+{"level":"info","message":"Testing logs endpoint...","timestamp":"2025-05-23T18:11:33.895Z"}
+{"level":"info","message":"Logs data received:","recentLogsCount":50,"timestamp":"2025-05-23T18:11:33.925Z","totalLines":448}
+{"level":"info","message":"Logs endpoint test: PASS","timestamp":"2025-05-23T18:11:33.925Z"}
+{"level":"info","message":"Testing log file creation...","timestamp":"2025-05-23T18:11:33.926Z"}
+{"level":"info","message":"Test log entry for monitoring test","timestamp":"2025-05-23T18:11:33.926Z"}
+{"level":"warn","message":"Test warning log for monitoring test","timestamp":"2025-05-23T18:11:33.926Z"}
+{"level":"error","message":"Test error log for monitoring test","timestamp":"2025-05-23T18:11:33.926Z"}
+{"level":"info","message":"Log file test: PASS","timestamp":"2025-05-23T18:11:34.942Z"}
+{"level":"info","message":"Testing CLI output...","timestamp":"2025-05-23T18:11:34.943Z"}
+{"level":"info","message":"CLI output test: PASS","timestamp":"2025-05-23T18:11:34.944Z"}
+{"0":{"message":"Test CLI output - info message","type":"log"},"1":{"message":"Test CLI output - error message","type":"error"},"level":"info","message":"Captured console output:","timestamp":"2025-05-23T18:11:34.944Z"}
+{"cliOutput":true,"healthChecks":true,"level":"info","logFileCreation":true,"logsEndpoint":true,"message":"Monitoring & Logging Test Results:","metricsEndpoint":true,"monitoringEndpoint":true,"timestamp":"2025-05-23T18:11:34.944Z"}
+{"level":"info","message":"All monitoring & logging tests passed:","timestamp":"2025-05-23T18:11:34.944Z"}
+{"level":"info","message":"\n⚡ Test 4: Stress Testing","timestamp":"2025-05-23T18:11:34.944Z"}
+{"level":"info","message":"--------------------------------------------------","timestamp":"2025-05-23T18:11:34.945Z"}
+{"level":"info","message":"Starting comprehensive stress testing...","timestamp":"2025-05-23T18:11:34.945Z"}
+{"level":"info","message":"Starting stress test for User Service...","timestamp":"2025-05-23T18:11:34.945Z"}
+{"avgResponseTime":8.195,"duration":6232,"errorTypes":[],"failedRequests":0,"level":"info","maxResponseTime":117,"message":"User Service stress test results:","minResponseTime":3,"requestsPerSecond":160.46213093709886,"successRate":1,"successfulRequests":1000,"timestamp":"2025-05-23T18:11:41.177Z","totalRequests":1000}
+{"level":"info","message":"Starting stress test for Order Service...","timestamp":"2025-05-23T18:11:41.178Z"}
+{"avgResponseTime":20.62,"duration":6228,"errorTypes":[],"failedRequests":0,"level":"info","maxResponseTime":286,"message":"Order Service stress test results:","minResponseTime":4,"requestsPerSecond":160.56518946692358,"successRate":1,"successfulRequests":1000,"timestamp":"2025-05-23T18:11:47.406Z","totalRequests":1000}
+{"level":"info","message":"Starting mixed load test...","timestamp":"2025-05-23T18:11:47.407Z"}
+{"avgResponseTime":533.4382591093117,"duration":20301,"errorTypes":["timeout of 10000ms exceeded"],"failedRequests":12,"level":"info","maxResponseTime":3494,"message":"Mixed load test results:","minResponseTime":3,"requestsPerSecond":49.25865720900448,"successRate":0.988,"successfulRequests":988,"timestamp":"2025-05-23T18:12:07.708Z","totalRequests":1000}
+{"level":"info","message":"Monitoring system performance during load...","timestamp":"2025-05-23T18:12:07.709Z"}
+{"averageUptime":277.5651651795334,"level":"info","memoryUsage":[{"arrayBuffers":4385318,"external":7269534,"heapTotal":49422336,"heapUsed":21249664,"rss":23654400},{"arrayBuffers":4385318,"external":7269534,"heapTotal":49422336,"heapUsed":21293064,"rss":22343680},{"arrayBuffers":4385318,"external":7269534,"heapTotal":49422336,"heapUsed":21329560,"rss":20590592},{"arrayBuffers":4385318,"external":7269534,"heapTotal":49422336,"heapUsed":21362176,"rss":14782464},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21439336,"rss":15466496},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21471288,"rss":13393920},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21503968,"rss":9252864},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21539096,"rss":10543104},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21571776,"rss":10059776},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21664152,"rss":12394496},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21696160,"rss":12247040},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21731904,"rss":12095488},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21764880,"rss":12505088},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21801592,"rss":9601024},{"arrayBuffers":4393510,"external":7277726,"heapTotal":49422336,"heapUsed":21881136,"rss":8175616}],"message":"Performance monitoring results:","timestamp":"2025-05-23T18:12:37.799Z","totalSnapshots":15}
+{"level":"info","message":"Stress Test Results:","mixedLoadTest":true,"orderServiceStress":true,"performanceMonitoring":true,"timestamp":"2025-05-23T18:12:37.800Z","userServiceStress":true}
+{"level":"info","message":"All stress tests passed:","timestamp":"2025-05-23T18:12:37.800Z"}
+{"level":"info","message":"\n🔧 Test 5: System Recovery Testing","timestamp":"2025-05-23T18:12:37.800Z"}
+{"level":"info","message":"--------------------------------------------------","timestamp":"2025-05-23T18:12:37.800Z"}
+{"level":"info","message":"Starting System Recovery tests...","timestamp":"2025-05-23T18:12:37.800Z"}
+{"level":"info","message":"Testing service recovery after container restart...","timestamp":"2025-05-23T18:12:37.800Z"}
+{"level":"info","message":"Step 1: Verifying all services are running...","timestamp":"2025-05-23T18:12:37.801Z"}
+{"level":"info","message":"Step 2: Creating test data...","timestamp":"2025-05-23T18:12:37.869Z"}
+{"level":"info","message":"Created test user:","timestamp":"2025-05-23T18:12:38.025Z"}
+{"level":"info","message":"Step 3: Restarting User Service container...","timestamp":"2025-05-23T18:12:38.026Z"}
+{"level":"info","message":"Step 4: Waiting for User Service to recover...","timestamp":"2025-05-23T18:12:41.267Z"}
+{"level":"info","message":"Step 5: Verifying data persistence after recovery...","timestamp":"2025-05-23T18:12:51.309Z"}
+{"level":"info","message":"Service recovery test: PASS","timestamp":"2025-05-23T18:12:51.645Z"}
+{"level":"info","message":"Testing Cassandra node recovery...","timestamp":"2025-05-23T18:12:51.646Z"}
+{"level":"info","message":"Step 1: Creating test data for Cassandra recovery...","timestamp":"2025-05-23T18:12:51.646Z"}
+{"level":"info","message":"Step 2: Stopping Cassandra node...","timestamp":"2025-05-23T18:12:51.933Z"}
+{"level":"info","message":"Step 3: Verifying system works with 2 Cassandra nodes...","timestamp":"2025-05-23T18:13:00.838Z"}
+{"level":"info","message":"Successfully created user while node is down:","timestamp":"2025-05-23T18:13:06.042Z"}
+{"level":"info","message":"Step 4: Restarting Cassandra node...","timestamp":"2025-05-23T18:13:06.042Z"}
+{"level":"info","message":"Step 5: Waiting for Cassandra node to rejoin cluster...","timestamp":"2025-05-23T18:13:06.912Z"}
+{"level":"info","message":"Step 6: Verifying data consistency after node rejoin...","timestamp":"2025-05-23T18:13:36.920Z"}
+{"level":"info","message":"Cassandra node recovery test: PASS","timestamp":"2025-05-23T18:13:37.285Z"}
+{"level":"info","message":"Testing API Gateway recovery...","timestamp":"2025-05-23T18:13:37.286Z"}
+{"level":"info","message":"Step 1: Verifying API Gateway is working...","timestamp":"2025-05-23T18:13:37.286Z"}
+{"level":"info","message":"Step 2: Stopping API Gateway...","timestamp":"2025-05-23T18:13:37.296Z"}
+{"level":"info","message":"Step 3: Verifying API Gateway is down...","timestamp":"2025-05-23T18:13:39.992Z"}
+{"level":"info","message":"API Gateway is down as expected","timestamp":"2025-05-23T18:13:39.994Z"}
+{"level":"info","message":"Step 4: Starting API Gateway...","timestamp":"2025-05-23T18:13:39.995Z"}
+{"level":"info","message":"Step 5: Waiting for API Gateway recovery...","timestamp":"2025-05-23T18:13:41.756Z"}
+{"level":"info","message":"Waiting for service http://localhost:3003 to be ready... (1/30)","timestamp":"2025-05-23T18:13:41.758Z"}
+{"level":"info","message":"Step 6: Verifying API Gateway functionality after recovery...","timestamp":"2025-05-23T18:13:43.797Z"}
+{"level":"info","message":"API Gateway recovery test: PASS","timestamp":"2025-05-23T18:13:43.799Z"}
+{"level":"info","message":"Testing complete system recovery...","timestamp":"2025-05-23T18:13:43.800Z"}
+{"level":"info","message":"Step 1: Creating test data before system restart...","timestamp":"2025-05-23T18:13:43.800Z"}
+{"level":"info","message":"Step 2: Restarting entire system...","timestamp":"2025-05-23T18:13:44.311Z"}
+{"level":"info","message":"Step 3: Waiting for complete system recovery...","timestamp":"2025-05-23T18:13:56.226Z"}
+{"level":"info","message":"Step 4: Verifying all services after recovery...","timestamp":"2025-05-23T18:14:56.230Z"}
+{"level":"info","message":"Waiting for Gateway service...","timestamp":"2025-05-23T18:14:56.230Z"}
+{"level":"info","message":"Gateway service is ready","timestamp":"2025-05-23T18:14:56.309Z"}
+{"level":"info","message":"Waiting for User service...","timestamp":"2025-05-23T18:14:56.310Z"}
+{"level":"info","message":"User service is ready","timestamp":"2025-05-23T18:14:56.322Z"}
+{"level":"info","message":"Waiting for Order service...","timestamp":"2025-05-23T18:14:56.322Z"}
+{"level":"info","message":"Order service is ready","timestamp":"2025-05-23T18:14:56.333Z"}
+{"level":"info","message":"Step 5: Verifying data persistence after system recovery...","timestamp":"2025-05-23T18:14:56.333Z"}
+{"level":"info","message":"Complete system recovery test: PASS","timestamp":"2025-05-23T18:14:57.364Z"}
+{"apiGatewayRecovery":true,"cassandraNodeRecovery":true,"completeSystemRecovery":true,"level":"info","message":"System Recovery Test Results:","serviceRecovery":true,"timestamp":"2025-05-23T18:14:57.364Z"}
+{"level":"info","message":"All system recovery tests passed:","timestamp":"2025-05-23T18:14:57.364Z"}
+{"level":"info","message":"\n🚀 Test 6: Deployment Automation Testing","timestamp":"2025-05-23T18:14:57.365Z"}
+{"level":"info","message":"--------------------------------------------------","timestamp":"2025-05-23T18:14:57.365Z"}
+{"level":"info","message":"Starting Deployment Automation tests...","timestamp":"2025-05-23T18:14:57.365Z"}
+{"level":"info","message":"Testing Docker Compose automation...","timestamp":"2025-05-23T18:14:57.365Z"}
+{"level":"info","message":"Step 1: Verifying Docker Compose file exists...","timestamp":"2025-05-23T18:14:57.365Z"}
+{"level":"info","message":"Step 2: Stopping all services...","timestamp":"2025-05-23T18:14:57.366Z"}
+{"level":"info","message":"Step 3: Starting services with Docker Compose...","timestamp":"2025-05-23T18:15:15.022Z"}
+{"level":"info","message":"Step 4: Waiting for all services to be ready...","timestamp":"2025-05-23T18:15:48.657Z"}
+{"level":"info","message":"Waiting for Gateway service...","timestamp":"2025-05-23T18:16:48.660Z"}
+{"level":"info","message":"Gateway service is ready","timestamp":"2025-05-23T18:16:48.701Z"}
+{"level":"info","message":"Waiting for User service...","timestamp":"2025-05-23T18:16:48.701Z"}
+{"level":"info","message":"User service is ready","timestamp":"2025-05-23T18:16:48.709Z"}
+{"level":"info","message":"Waiting for Order service...","timestamp":"2025-05-23T18:16:48.709Z"}
+{"level":"info","message":"Order service is ready","timestamp":"2025-05-23T18:16:48.716Z"}
+{"level":"info","message":"Step 5: Verifying service functionality...","timestamp":"2025-05-23T18:16:48.717Z"}
+{"level":"info","message":"Docker Compose automation test: PASS","timestamp":"2025-05-23T18:16:48.730Z"}
+{"level":"info","message":"Testing deployment script automation...","timestamp":"2025-05-23T18:16:48.730Z"}
+{"level":"info","message":"Step 1: Creating automated deployment script...","timestamp":"2025-05-23T18:16:48.730Z"}
+{"level":"info","message":"Step 2: Making deployment script executable...","timestamp":"2025-05-23T18:16:48.732Z"}
+{"level":"warn","message":"Could not chmod deployment script (Windows environment)","timestamp":"2025-05-23T18:16:48.749Z"}
+{"level":"info","message":"Step 3: Running automated deployment script...","timestamp":"2025-05-23T18:16:48.749Z"}
+{"level":"info","message":"Executing deployment commands...","timestamp":"2025-05-23T18:16:48.749Z"}
+{"level":"info","message":"Step 4: Verifying automated deployment...","timestamp":"2025-05-23T18:17:38.496Z"}
+{"level":"info","message":"Deployment script automation test: PASS","timestamp":"2025-05-23T18:18:24.003Z"}
+{"level":"info","message":"Testing health check automation...","timestamp":"2025-05-23T18:18:24.003Z"}
+{"level":"info","message":"Step 1: Creating automated health check script...","timestamp":"2025-05-23T18:18:24.003Z"}
+{"level":"info","message":"Step 2: Verifying automated health checks...","timestamp":"2025-05-23T18:18:24.010Z"}
+{"level":"info","message":"Step 3: Testing continuous health monitoring...","timestamp":"2025-05-23T18:18:24.011Z"}
+{"level":"info","message":"Continuous monitoring: 7/7 checks healthy (100.0%)","timestamp":"2025-05-23T18:18:45.111Z"}
