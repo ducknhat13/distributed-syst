@@ -1,11 +1,20 @@
-const cassandra = require('cassandra-driver');
+const { Client } = require('cassandra-driver');
 const config = require('./config');
 const logger = require('../utils/logger');
 
-const client = new cassandra.Client({
-    contactPoints: config.cassandra.contactPoints,
-    localDataCenter: config.cassandra.localDataCenter,
-    keyspace: config.cassandra.keyspace
+const contactPoints = ['localhost:9042', 'localhost:9043', 'localhost:9044'];
+const localDataCenter = 'datacenter1';
+
+const client = new Client({
+    contactPoints: contactPoints,
+    localDataCenter: localDataCenter,
+    keyspace: 'your_keyspace',
+    pooling: {
+        maxRequestsPerConnection: 32768
+    },
+    socketOptions: {
+        connectTimeout: 5000
+    }
 });
 
 // Khởi tạo keyspace nếu chưa tồn tại
