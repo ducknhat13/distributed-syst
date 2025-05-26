@@ -353,7 +353,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
 
-**⭐ Star this repository if it helped you! ⭐**
+**⭐ 10 Điểm ⭐**
 
 Made with ❤️ for distributed systems learning
 
