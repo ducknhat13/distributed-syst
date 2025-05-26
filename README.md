@@ -334,13 +334,9 @@ curl http://localhost:3002/health
 4. **Push** to the branch (`git push origin feature/AmazingFeature`)
 5. Open a **Pull Request**
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [@yourusername](https://github.com/yourusername)
+- **Đức Nhật** - *Initial work* - [@yourusername](https://github.com/yourusername)
 
 ## 🙏 Acknowledgments
 
@@ -356,7 +352,5 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **⭐ 10 Điểm ⭐**
 
 Made with ❤️ for distributed systems learning
-
-[🚀 Report Bug](https://github.com/yourusername/repo/issues) • [✨ Request Feature](https://github.com/yourusername/repo/issues) • [📖 Documentation](./README-TESTING.md)
 
 </div> 
