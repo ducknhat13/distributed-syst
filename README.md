@@ -20,7 +20,7 @@ Xây dựng và kiểm tra một **distributed system** hoàn chỉnh với:
 
 ## 👥 Phân Chia Công Việc Nhóm
 
-### 🧑‍💻 **Nhật:**
+### 🧑‍💻 **Nhật:** - [@ducknhat13](https://github.com/ducknhat13)
 - Thiết kế hệ thống kiến trúc tổng thể
 - Thiết kế API, kết nối thư viện Cassandra
 - Test 2 tiêu chí mở rộng:
@@ -350,10 +350,6 @@ curl http://localhost:3002/health
 3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
 4. **Push** to the branch (`git push origin feature/AmazingFeature`)
 5. Open a **Pull Request**
-
-## 👥 Nhóm Phát Triển
-
-- **Đức Nhật** - *Initial work* - [@ducknhat13](https://github.com/ducknhat13)
 
 ## 🙏 Lời Cảm Ơn
 
