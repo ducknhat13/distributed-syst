@@ -18,6 +18,25 @@ Xây dựng và kiểm tra một **distributed system** hoàn chỉnh với:
 - **Production-ready monitoring** và logging capabilities
 - **Automated deployment** và recovery mechanisms
 
+## 👥 Phân Chia Công Việc Nhóm
+
+### 🧑‍💻 **Nhật:**
+- Thiết kế hệ thống kiến trúc tổng thể
+- Thiết kế API, kết nối thư viện Cassandra
+- Test 2 tiêu chí mở rộng:
+  - System Recovery
+  - Deployment Automation
+
+### 👨‍💻 **Dũng:**
+- Xây dựng bộ tiêu chí kiểm thử bắt buộc:
+  - Fault Tolerance
+  - Distributed Communication
+  - Replication
+  - Logging
+  - Basic Stress Test
+- Đóng gói và triển khai Dockerfile
+- Tạo scripts mô phỏng lỗi
+
 ## 🏛️ Kiến Trúc Hệ Thống
 
 ```mermaid
@@ -51,7 +70,7 @@ graph TB
     C3 -.->|Replication| C1
 ```
 
-## ✅ Tiêu Chí Testing (6/6 Hoàn Thành)
+## ✅ Tiêu Chí Kiểm Thử (6/6 Hoàn Thành)
 
 ### 🎯 Tiêu Chí Bắt Buộc (4/4) ✅
 
@@ -69,7 +88,7 @@ graph TB
 | 🔧 **System Recovery** | Khả năng phục hồi sau failure scenarios | ✅ PASS | `npm run test:recovery` |
 | 🚀 **Deployment Automation** | Tự động hóa triển khai với Docker Compose | ✅ PASS | `npm run test:deployment` |
 
-## 🚀 Quick Start
+## 🚀 Hướng Dẫn Khởi Động
 
 ### Yêu Cầu Hệ Thống
 
@@ -113,7 +132,7 @@ npm run test:recovery        # System Recovery
 npm run test:deployment      # Deployment Automation
 ```
 
-## 📊 Test Results Summary
+## 📊 Tóm Tắt Kết Quả Kiểm Thử
 
 ```
 ================================================================================
@@ -137,7 +156,7 @@ COMPREHENSIVE TEST RESULTS SUMMARY
 ================================================================================
 ```
 
-## 🔍 Chi Tiết Test Suites
+## 🔍 Chi Tiết Bộ Kiểm Thử
 
 ### 🌐 Test 1: Distributed Communication
 
@@ -210,7 +229,7 @@ COMPREHENSIVE TEST RESULTS SUMMARY
 - ✅ Health check automation (100% uptime)
 - ✅ Basic scaling capabilities
 
-## 🛠️ Technology Stack
+## 🛠️ Công Nghệ Sử Dụng
 
 | Component | Technology | Version | Purpose |
 |-----------|------------|---------|---------|
@@ -222,7 +241,7 @@ COMPREHENSIVE TEST RESULTS SUMMARY
 | **Logging** | Winston | 3.17+ | Structured logging |
 | **Testing** | Custom Framework | - | Comprehensive test automation |
 
-## 📡 API Endpoints
+## 📡 Các Điểm Cuối API
 
 ### 🔗 API Gateway (localhost:3003)
 - `GET /health` - Health check with uptime & nodeId
@@ -242,9 +261,9 @@ COMPREHENSIVE TEST RESULTS SUMMARY
 - `GET /orders` - List all orders
 - `POST /orders` - Create new order
 
-## 🔧 Development & Debugging
+## 🔧 Phát Triển & Gỡ Lỗi
 
-### Check System Status
+### Kiểm Tra Trạng Thái Hệ Thống
 
 ```bash
 # Xem status containers
@@ -259,7 +278,7 @@ docker-compose -f docker-compose.distributed.yml logs user_service
 docker-compose -f docker-compose.distributed.yml logs cassandra1
 ```
 
-### Manual Testing
+### Kiểm Thử Thủ Công
 
 ```bash
 # Test User Service
@@ -276,7 +295,7 @@ curl http://localhost:3001/health
 curl http://localhost:3002/health
 ```
 
-### Troubleshooting
+### Khắc Phục Sự Cố
 
 | Issue | Solution |
 |-------|----------|
@@ -285,9 +304,9 @@ curl http://localhost:3002/health
 | 🔴 **Port conflicts** | Ensure ports 3001-3003, 9042-9044 are available |
 | 🔴 **Connection refused** | Verify all containers are running with `docker ps` |
 
-## 📈 Performance Benchmarks
+## 📈 Đánh Giá Hiệu Suất
 
-### Stress Test Results
+### Kết Quả Stress Test
 
 | Metric | User Service | Order Service | Mixed Load |
 |--------|-------------|---------------|------------|
@@ -297,16 +316,14 @@ curl http://localhost:3002/health
 | **Avg Response Time** | 8.2ms | 20.6ms | 533.4ms |
 | **Max Response Time** | 117ms | 286ms | 3,494ms |
 
-### System Resources
+### Tài Nguyên Hệ Thống
 
 - **Memory Usage:** Stable ~21MB heap per service
 - **CPU Utilization:** < 5% under normal load
 - **Network Latency:** < 20ms inter-service communication
 - **Disk I/O:** Minimal with Cassandra write optimization
 
-## 🔒 Production Readiness
-
-### ✅ Completed Features
+### ✅ Tính Năng Đã Hoàn Thành
 
 - [x] **High Availability:** 3-node Cassandra cluster with RF=3
 - [x] **Fault Tolerance:** Automatic failover & recovery
@@ -317,7 +334,7 @@ curl http://localhost:3002/health
 - [x] **Documentation:** Complete API documentation
 - [x] **Deployment:** Docker Compose automation
 
-### 🔄 Future Enhancements
+### 🔄 Cải Tiến Tương Lai
 
 - [ ] **Authentication:** JWT-based security
 - [ ] **Rate Limiting:** API throttling mechanisms
@@ -326,7 +343,7 @@ curl http://localhost:3002/health
 - [ ] **CI/CD:** GitHub Actions pipeline
 - [ ] **Alerting:** Prometheus + Grafana integration
 
-## 🤝 Contributing
+## 🤝 Đóng Góp
 
 1. **Fork** the repository
 2. Create your **feature branch** (`git checkout -b feature/AmazingFeature`)
@@ -334,11 +351,11 @@ curl http://localhost:3002/health
 4. **Push** to the branch (`git push origin feature/AmazingFeature`)
 5. Open a **Pull Request**
 
-## 👥 Authors
+## 👥 Nhóm Phát Triển
 
 - **Đức Nhật** - *Initial work* - [@ducknhat13](https://github.com/ducknhat13)
 
-## 🙏 Acknowledgments
+## 🙏 Lời Cảm Ơn
 
 - **Apache Cassandra** team for the excellent distributed database
 - **Docker** for containerization platform
