@@ -1,4 +1,4 @@
-# 🚀 Distributed Cassandra System Testing Framework
+# 🛒 Hệ Thống Quản Lý Người Dùng & Đơn Hàng Phân Tán
 
 [![Tests](https://img.shields.io/badge/tests-6%2F6%20passing-brightgreen)](./tests)
 [![Docker](https://img.shields.io/badge/docker-compose-blue)](./docker-compose.distributed.yml)
@@ -7,16 +7,18 @@
 
 ## 📋 Tổng Quan
 
-Framework testing toàn diện cho **Distributed Systems** sử dụng **Apache Cassandra**, được thiết kế để kiểm tra và xác minh khả năng hoạt động của hệ thống phân tán trong môi trường production.
+Hệ thống **quản lý người dùng và đơn hàng** được xây dựng với kiến trúc **microservices phân tán**, sử dụng **Apache Cassandra** làm cơ sở dữ liệu. Dự án được thiết kế với khả năng mở rộng cao, fault tolerance và bao gồm framework testing toàn diện để đảm bảo tính ổn định trong môi trường production.
 
 ### 🎯 Mục Tiêu Dự Án
 
-Xây dựng và kiểm tra một **distributed system** hoàn chỉnh với:
-- **3-node Cassandra cluster** với replication factor = 3
-- **Microservices architecture** (API Gateway, User Service, Order Service) 
-- **Comprehensive testing framework** với 6 test suites
-- **Production-ready monitoring** và logging capabilities
-- **Automated deployment** và recovery mechanisms
+Xây dựng một **hệ thống thương mại điện tử cơ bản** với các tính năng:
+- **👤 Quản lý người dùng**: Tạo, xem, cập nhật thông tin người dùng
+- **🛒 Quản lý đơn hàng**: Tạo đơn hàng, theo dõi trạng thái, lịch sử mua hàng
+- **🏗️ Kiến trúc microservices**: API Gateway, User Service, Order Service
+- **🗄️ Database phân tán**: 3-node Cassandra cluster với replication factor = 3
+- **🧪 Testing framework**: 6 test suites toàn diện đảm bảo chất lượng
+- **📊 Monitoring & Logging**: Giám sát real-time và logging tập trung
+- **🚀 Deployment tự động**: Docker Compose và recovery mechanisms
 
 ## 👥 Phân Chia Công Việc Nhóm
 
