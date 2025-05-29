@@ -26,6 +26,7 @@ Xây dựng và kiểm tra một **distributed system** hoàn chỉnh với:
 - Test 2 tiêu chí mở rộng:
   - System Recovery
   - Deployment Automation
+- Viết Blog, Readme
 
 ### 👨‍💻 **Dũng:**
 - Xây dựng bộ tiêu chí kiểm thử bắt buộc:
