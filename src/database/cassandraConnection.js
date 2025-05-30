@@ -48,14 +48,8 @@ const client = new Client({
         port: 9042  // Default Cassandra port
     },
     
-    // Cấu hình retry policy cho resilience
-    policies: {
-        retry: {
-            // Retry lại khi có lỗi tạm thời
-            retryDelay: 1000,
-            maxRetryCount: 3
-        }
-    }
+    // Sử dụng default retry policy của cassandra-driver
+    // (Bỏ custom retry config vì format không đúng)
 });
 
 /**
@@ -327,7 +321,10 @@ async function executeQuery(query, params = [], options = { prepare: true }) {
         console.log('📝 Parameters:', params);
         
         const result = await client.execute(query, params, options);
-        console.log('✅ Query executed successfully, rows returned:', result.rows.length);
+        
+        // Add null check for result.rows
+        const rowCount = result && result.rows ? result.rows.length : 0;
+        console.log('✅ Query executed successfully, rows returned:', rowCount);
         
         return result;
         

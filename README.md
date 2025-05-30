@@ -244,7 +244,7 @@ COMPREHENSIVE TEST RESULTS SUMMARY
 | **Logging** | Winston | 3.17+ | Structured logging |
 | **Testing** | Custom Framework | - | Comprehensive test automation |
 
-## 📡 Các Điểm Cuối API
+## 📡 API
 
 ### 🔗 API Gateway (localhost:3003)
 - `GET /health` - Health check with uptime & nodeId
@@ -307,44 +307,6 @@ curl http://localhost:3002/health
 | 🔴 **Port conflicts** | Ensure ports 3001-3003, 9042-9044 are available |
 | 🔴 **Connection refused** | Verify all containers are running with `docker ps` |
 
-## 📈 Đánh Giá Hiệu Suất
-
-### Kết Quả Stress Test
-
-| Metric | User Service | Order Service | Mixed Load |
-|--------|-------------|---------------|------------|
-| **Total Requests** | 1,000 | 1,000 | 1,000 |
-| **Success Rate** | 100% | 100% | 98.8% |
-| **Requests/Second** | 160.46 | 160.57 | 49.26 |
-| **Avg Response Time** | 8.2ms | 20.6ms | 533.4ms |
-| **Max Response Time** | 117ms | 286ms | 3,494ms |
-
-### Tài Nguyên Hệ Thống
-
-- **Memory Usage:** Stable ~21MB heap per service
-- **CPU Utilization:** < 5% under normal load
-- **Network Latency:** < 20ms inter-service communication
-- **Disk I/O:** Minimal with Cassandra write optimization
-
-### ✅ Tính Năng Đã Hoàn Thành
-
-- [x] **High Availability:** 3-node Cassandra cluster with RF=3
-- [x] **Fault Tolerance:** Automatic failover & recovery
-- [x] **Performance:** Sub-20ms response times under load
-- [x] **Monitoring:** Comprehensive health checks & metrics
-- [x] **Logging:** Structured logging with Winston
-- [x] **Testing:** 100% automated test coverage
-- [x] **Documentation:** Complete API documentation
-- [x] **Deployment:** Docker Compose automation
-
-### 🔄 Cải Tiến Tương Lai
-
-- [ ] **Authentication:** JWT-based security
-- [ ] **Rate Limiting:** API throttling mechanisms
-- [ ] **Caching:** Redis integration for performance
-- [ ] **Kubernetes:** K8s deployment manifests
-- [ ] **CI/CD:** GitHub Actions pipeline
-- [ ] **Alerting:** Prometheus + Grafana integration
 
 ## 🤝 Đóng Góp
 

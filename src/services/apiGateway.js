@@ -705,7 +705,7 @@ app.use((req, res) => {
  * Start API Gateway Server
  * Khởi động server và log thông tin configuration
  */
-const PORT = process.env.PORT || 3003;  // Changed from 3000 to 3003
+const PORT = process.env.PORT || 3000;  // Changed from 3003 to 3000 to match Docker mapping
 
 app.listen(PORT, () => {
     console.log('\n' + '='.repeat(80));
