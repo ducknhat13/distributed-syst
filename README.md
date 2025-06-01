@@ -132,7 +132,7 @@ graph TB
 - `GET /orders` - List all orders
 - `POST /orders` - Create new order
 
-## 🔧 Phát Triển & Gỡ Lỗi
+## Kiểm thử
 
 ### Kiểm Tra Trạng Thái Hệ Thống
 
@@ -300,6 +300,7 @@ docker-compose -f docker-compose.distributed.yml up -d
 # Kiểm tra dữ liệu vẫn còn
 curl http://localhost:3003/api/users
 
+```
 
 ### Khắc Phục Sự Cố
 
