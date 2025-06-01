@@ -110,7 +110,7 @@ graph TB
 | **Containerization** | Docker & Docker Compose | 20.0+ | Container orchestration |
 | **HTTP Client** | Axios | 1.6+ | HTTP request library |
 | **Logging** | Winston | 3.17+ | Structured logging |
-| **Testing** | Custom Framework | - | Comprehensive test automation |
+| **Testing** | Manual Testing | - | Manual test execution and verification |
 
 ## 📡 API
 
@@ -163,7 +163,7 @@ docker-compose -f docker-compose.distributed.yml ps
 docker-compose -f docker-compose.distributed.yml logs -f
 ```
 
-## 2. Kiểm tra tình trạng sức khỏe các service
+## 2. Kiểm tra tình trạng các service
 ```bash
 # Kiểm tra API Gateway
 curl http://localhost:3003/health
