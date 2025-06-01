@@ -294,10 +294,8 @@ curl http://localhost:3002/health
 
 ## 🙏 Lời Cảm Ơn
 
-- **Apache Cassandra** team for the excellent distributed database
-- **Docker** for containerization platform
-- **Node.js** community for the runtime environment
-- **Express.js** for the lightweight web framework
+- Xin chân thành cảm ơn giảng viên (Ths.Phạm Kim Thành) đã tận tình hướng dẫn và hỗ trợ trong suốt quá trình học tập và thực hiện dự án này.
+- Cảm ơn ChatGPT đã giúp đỡ tôi trong việc giải đáp thắc mắc và hỗ trợ viết code, tài liệu một cách hiệu quả.
 
 ---
 
