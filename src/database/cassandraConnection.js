@@ -38,7 +38,7 @@ const client = new Client({
         'cassandra3'     // Node 3 - Port 9044 (external mapping)
     ],
     
-    // Data center để client biết routing preference
+    
     localDataCenter: 'datacenter1',
     
     // Cấu hình protocol connection
