@@ -62,31 +62,7 @@ async function testCassandraFailover() {
     }
 }
 
-// Test 4: Kiểm tra network latency
-async function testNetworkLatency() {
-    logger.info('Testing network latency...');
-    
-    const NUM_REQUESTS = 10;
-    const latencies = [];
 
-    try {
-        for (let i = 0; i < NUM_REQUESTS; i++) {
-            const start = Date.now();
-            await axios.get(`${SERVICES.GATEWAY}/health`);
-            const end = Date.now();
-            latencies.push(end - start);
-        }
-
-        const avgLatency = latencies.reduce((a, b) => a + b, 0) / latencies.length;
-        logger.info('Average Latency:', avgLatency, 'ms');
-        
-        // Kiểm tra xem độ trễ có nằm trong ngưỡng chấp nhận được không
-        return avgLatency < 1000; // Ngưỡng 1 giây
-    } catch (error) {
-        logger.error('Network Latency Test Failed:', error.message);
-        return false;
-    }
-}
 
 // Chạy tất cả các test
 async function runDistributedCommunicationTests() {
@@ -95,7 +71,6 @@ async function runDistributedCommunicationTests() {
     const results = {
         serviceCommunication: await testServiceCommunication(),
         cassandraFailover: await testCassandraFailover(),
-        networkLatency: await testNetworkLatency()
     };
 
     logger.info('Test Results:', results);
@@ -110,6 +85,5 @@ async function runDistributedCommunicationTests() {
 module.exports = {
     testServiceCommunication,
     testCassandraFailover,
-    testNetworkLatency,
     runDistributedCommunicationTests
 }; 

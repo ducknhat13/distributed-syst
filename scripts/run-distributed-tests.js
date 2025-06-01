@@ -1,4 +1,4 @@
-const { runAllTests } = require('../tests/distributed-communication.test');
+const { runDistributedCommunicationTests } = require('../tests/distributed-communication.test');
 const logger = require('../src/utils/logger');
 
 async function main() {
@@ -10,7 +10,7 @@ async function main() {
         await new Promise(resolve => setTimeout(resolve, 30000)); // Đợi 30 giây
         
         // Chạy tất cả các test
-        const success = await runAllTests();
+        const success = await runDistributedCommunicationTests();
         
         if (success) {
             logger.info('All distributed communication tests passed successfully!');
@@ -25,4 +25,4 @@ async function main() {
     }
 }
 
-main(); 
+main();

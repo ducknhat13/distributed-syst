@@ -5,9 +5,7 @@
  * 
  * File này chứa tất cả logic kết nối và quản lý Apache Cassandra database
  * Mục đích: Tái sử dụng code, dễ maintain và monitor connection
- * 
- * Author: Distributed System Team
- * Version: 1.0.0
+
  * =============================================================================
  */
 

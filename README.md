@@ -77,18 +77,18 @@ graph TB
 
 ### 🎯 Tiêu Chí Bắt Buộc (4/4) ✅
 
-| Tiêu Chí | Mô Tả | Status | Test Suite |
-|----------|-------|--------|------------|
-| 🌐 **Distributed Communication** | Giao tiếp HTTP giữa microservices phân tán | ✅ PASS | `npm run test:distributed` |
-| 🔄 **Data Replication** | Nhân bản dữ liệu trên 3 Cassandra nodes | ✅ PASS | `npm run test:replication` |
-| 📊 **Simple Monitoring/Logging** | Hệ thống giám sát và logging | ✅ PASS | `npm run test:monitoring` |
-| ⚡ **Basic Stress Test** | Kiểm tra hiệu suất under high load | ✅ PASS | `npm run test:stress` |
+| Tiêu Chí | Mô Tả | Status |
+|----------|-------|--------|
+| 🌐 **Distributed Communication** | Giao tiếp HTTP giữa microservices phân tán | ✅ PASS |
+| 🔄 **Data Replication** | Nhân bản dữ liệu trên 3 Cassandra nodes | ✅ PASS |
+| 📊 **Simple Monitoring/Logging** | Hệ thống giám sát và logging | ✅ PASS |
+| ⚡ **Basic Stress Test** | Kiểm tra hiệu suất under high load | ✅ PASS |
 
 ### 🏆 Tiêu Chí Phụ (2/2) ✅
 
-| Tiêu Chí | Mô Tả | Status | Test Suite |
-|----------|-------|--------|------------|
-| 🔧 **System Recovery** | Khả năng phục hồi sau failure scenarios | ✅ PASS | `npm run test:recovery` |
+| Tiêu Chí | Mô Tả | Status |
+|----------|-------|--------|
+| 🔧 **System Recovery** | Khả năng phục hồi sau failure scenarios | ✅ PASS |
 | 🚀 **Deployment Automation** | Tự động hóa triển khai với Docker Compose | ✅ PASS | `npm run test:deployment` |
 
 ## 🚀 Hướng Dẫn Khởi Động
@@ -100,39 +100,6 @@ graph TB
 - **Minimum 4GB RAM** và **2GB free storage**
 - **Windows/Linux/macOS** support
 
-### 1. Clone Repository
-
-```bash
-git clone <repository-url>
-cd apache-cassandra
-```
-
-### 2. Khởi Động Hệ Thống
-
-```bash
-# Khởi động toàn bộ distributed system
-docker-compose -f docker-compose.distributed.yml up -d
-
-# Kiểm tra containers đã running
-docker-compose -f docker-compose.distributed.yml ps
-```
-
-### 3. Chạy Tests
-
-```bash
-# Install dependencies
-npm install
-
-# Chạy tất cả test suites (recommended)
-npm run test:all
-
-# Hoặc chạy từng test riêng lẻ
-npm run test:distributed     # Distributed Communication
-npm run test:replication     # Data Replication  
-npm run test:monitoring      # Monitoring & Logging
-npm run test:stress          # Stress Testing
-npm run test:recovery        # System Recovery
-npm run test:deployment      # Deployment Automation
 ```
 
 ## 🔍 Chi Tiết Bộ Kiểm Thử
@@ -259,20 +226,155 @@ docker-compose -f docker-compose.distributed.yml logs cassandra1
 
 ### Kiểm Thử Thủ Công
 
+## 1. Khởi động hệ thống
 ```bash
-# Test User Service
-curl -X POST http://localhost:3001/users \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Test User","email":"test@example.com"}'
+# Khởi động toàn bộ hệ thống
+docker-compose -f docker-compose.distributed.yml up -d
 
-# Test API Gateway monitoring
-curl http://localhost:3003/monitoring | jq
+# Kiểm tra trạng thái các container
+docker-compose -f docker-compose.distributed.yml ps
 
-# Test health checks
+# Theo dõi logs tất cả services
+docker-compose -f docker-compose.distributed.yml logs -f
+```
+
+## 2. Kiểm tra tình trạng sức khỏe các service
+```bash
+# Kiểm tra API Gateway
 curl http://localhost:3003/health
-curl http://localhost:3001/health  
+
+# Kiểm tra User Service
+curl http://localhost:3001/health
+
+# Kiểm tra Order Service  
 curl http://localhost:3002/health
 ```
+
+## 3. Kiểm tra Cassandra Cluster
+```bash
+# Kết nối vào cassandra1
+docker exec -it cassandra1 cqlsh
+
+# Trong cqlsh, kiểm tra cluster status
+DESCRIBE CLUSTER;
+SELECT * FROM system.peers;
+
+# Tạo keyspace với replication factor = 3
+CREATE KEYSPACE IF NOT EXISTS demo_ks WITH replication = {
+    'class': 'SimpleStrategy',
+    'replication_factor': 3
+};
+
+# Sử dụng keyspace
+USE demo_ks;
+
+# Tạo bảng demo
+CREATE TABLE IF NOT EXISTS users (
+    id UUID PRIMARY KEY,
+    name TEXT,
+    email TEXT,
+    created_at TIMESTAMP
+);
+```
+
+## 4. Demo Distributed Communication
+```bash
+# Tạo user mới qua API Gateway
+curl -X POST http://localhost:3003/api/users \
+  -H "Content-Type: application/json" \
+  -d '{"name": "John Doe", "email": "john@example.com"}'
+
+# Lấy danh sách users
+curl http://localhost:3003/api/users
+
+# Tạo order
+curl -X POST http://localhost:3003/api/orders \
+  -H "Content-Type: application/json" \
+  -d '{"user_id": "user-id-here", "product": "Laptop", "amount": 1500}'
+
+# Lấy danh sách orders
+curl http://localhost:3003/api/orders
+```
+
+## 5. Demo Fault Tolerance
+```bash
+# Dừng cassandra2
+docker stop cassandra2
+
+# Kiểm tra hệ thống vẫn hoạt động
+curl http://localhost:3003/api/users
+
+# Khởi động lại cassandra2
+docker start cassandra2
+
+# Dừng user_service
+docker stop user_service
+
+# Kiểm tra API Gateway xử lý lỗi
+curl http://localhost:3003/api/users
+
+# Khởi động lại user_service
+docker start user_service
+```
+
+## 6. Demo Replication
+```bash
+# Kết nối vào cassandra1
+docker exec -it cassandra1 cqlsh -k demo_ks
+
+# Thêm dữ liệu
+INSERT INTO users (id, name, email, created_at) VALUES (uuid(), 'Test User 1', 'test1@example.com', toTimestamp(now()));
+
+# Kết nối vào cassandra2 và kiểm tra dữ liệu đã được replicate
+docker exec -it cassandra2 cqlsh -k demo_ks -e "SELECT * FROM users;"
+
+# Kết nối vào cassandra3 và kiểm tra
+docker exec -it cassandra3 cqlsh -k demo_ks -e "SELECT * FROM users;"
+```
+
+## 7. Stress Test
+```bash
+# Sử dụng Apache Bench để test API Gateway
+ab -n 1000 -c 10 http://localhost:3003/api/users
+
+# Hoặc sử dụng curl với loop
+for i in {1..100}; do
+  curl -X POST http://localhost:3003/api/users \
+    -H "Content-Type: application/json" \
+    -d "{\"name\": \"User $i\", \"email\": \"user$i@example.com\"}" &
+done
+wait
+```
+
+## 8. Monitoring và Logging
+```bash
+# Xem logs của API Gateway
+docker logs -f api_gateway
+
+# Xem logs của User Service
+docker logs -f user_service
+
+# Xem logs của Order Service
+docker logs -f order_service
+
+# Xem logs của Cassandra
+docker logs -f cassandra1
+
+# Xem resource usage
+docker stats
+```
+
+## 9. System Recovery Demo
+```bash
+# Dừng toàn bộ hệ thống
+docker-compose -f docker-compose.distributed.yml down
+
+# Khởi động lại với persistent data
+docker-compose -f docker-compose.distributed.yml up -d
+
+# Kiểm tra dữ liệu vẫn còn
+curl http://localhost:3003/api/users
+
 
 ### Khắc Phục Sự Cố
 
@@ -306,3 +408,4 @@ curl http://localhost:3002/health
 Made with ❤️ for distributed systems learning
 
 </div> 
+
