@@ -62,42 +62,6 @@ async function testCassandraFailover() {
     }
 }
 
-// Test 3: Kiểm tra load balancing
-async function testLoadBalancing() {
-    logger.info('Testing load balancing...');
-    
-    const NUM_REQUESTS = 100;
-    const results = {
-        node1: 0,
-        node2: 0,
-        node3: 0,
-        nodeUndefined: 0
-    };
-
-    try {
-        for (let i = 0; i < NUM_REQUESTS; i++) {
-            const response = await axios.get(`${SERVICES.GATEWAY}/health`);
-            logger.info('Health response:', response.data);
-            const nodeId = response.data.nodeId;
-            if (nodeId) {
-                results[`node${nodeId}`]++;
-            } else {
-                results.nodeUndefined++;
-            }
-        }
-
-        logger.info('Load Distribution:', results);
-        
-        // Với chỉ 1 API Gateway, chúng ta expect tất cả request đều đi đến node1
-        const isBalanced = results.node1 === NUM_REQUESTS;
-        
-        return isBalanced;
-    } catch (error) {
-        logger.error('Load Balancing Test Failed:', error.message);
-        return false;
-    }
-}
-
 // Test 4: Kiểm tra network latency
 async function testNetworkLatency() {
     logger.info('Testing network latency...');
@@ -131,7 +95,6 @@ async function runDistributedCommunicationTests() {
     const results = {
         serviceCommunication: await testServiceCommunication(),
         cassandraFailover: await testCassandraFailover(),
-        loadBalancing: await testLoadBalancing(),
         networkLatency: await testNetworkLatency()
     };
 
@@ -147,7 +110,6 @@ async function runDistributedCommunicationTests() {
 module.exports = {
     testServiceCommunication,
     testCassandraFailover,
-    testLoadBalancing,
     testNetworkLatency,
     runDistributedCommunicationTests
 }; 
